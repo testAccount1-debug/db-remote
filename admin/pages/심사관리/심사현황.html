@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100" />
+    <link rel="stylesheet" href="../../../front/pc/dist/assets/css/reset.css" />
+    <link rel="stylesheet" href="../../../front/pc/dist/assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="../../../front/pc/dist/assets/css/style.css" />
+    <link rel="stylesheet" href="../../../admin/assets/css/admin.css">
+    <script src="../../../front/pc/dist/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../../../front/pc/dist/assets/js/jquery-ui.js"></script>
+    <script src="../../../front/pc/dist/assets/js/swiper.min.js"></script>
+    <script src="../../../front/pc/dist/assets/js/ui.js"></script>
+    <title>원격컨설팅솔루션</title>
+</head>
+
+<body class="admin_body">
+    <div class="page_wrap">
+        <header class="header_wrap">
+            <div class="hgroup_inner">
+                <h1 class="toplogo">
+                    <a href="#" class="toplogo_link">
+                        <img src="../../../front/pc/dist/assets/images/toplogo.png" class="toplogo_main" alt="DB손해보험">
+                        <img src="../../../front/pc/dist/assets/images/toplogo_lotte.png" class="toplogo_sub" alt="원격 컨설팅">
+                    </a>
+                </h1>
+            </div>
+            <nav class="hgroup_nav_wrap">
+                <ul class="hgroup_nav_list">
+                    <li class="hgroup_home">
+						<a href="#" class="hgroup_home"><span class="hdtext">Home</span></a>
+					</li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">상담관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">정규상담이력</a></li>
+                            <li><a href="#">간편상담이력</a></li>
+                            <li><a href="#">PA코칭이력</a></li>
+                            <li><a href="#">접속URL전송이력</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">계약관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">계약/심사현황</a></li>
+                            <li><a href="#">로그기록/상품설명정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">사용자관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">사용자정보</a></li>
+                            <li><a href="#">등록증업로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item active">
+                            <span class="hgroup_nav_text">심사관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">심사대상</a></li>
+                            <li><a href="#">심사결과</a></li>
+                            <li><a href="#">심사현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">시스템관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">사용자계정</a></li>
+                            <li><a href="#">관리자계정</a></li>
+                            <li><a href="#">공통컨텐츠</a></li>
+                            <li><a href="#">상담자료 접근이력</a></li>
+                            <li><a href="#">시스템 접근이력</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="middle_wrap">
+            <div class="data_search_container">
+                <div class="data_search_box">
+                    <form>
+                        <table class="data_search_field">
+                            <tr>
+                                <th><span class="data_search_label">기준일</span></th>
+                                <td>
+                                    <div class="inline_flex_item">
+                                        <div class="inline_flex_item">
+                                            <input type="text" class="form_input calendar" value="2024-06-07">
+                                        </div>
+                                        <div class="inline_flex_cols">
+                                            <span class="inline_flex_else">~</span>
+                                        </div>
+                                        <div class="inline_flex_item">
+                                            <input type="text" class="form_input calendar" value="2024-06-07">
+                                        </div>
+                                        <div class="inline_flex_item">
+                                            <div class="chk_wrap">
+                                                <input type="checkbox" class="props_form" id="chk1">
+                                                <label for="chk1">기준일무관</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th><span class="data_search_label">심사자</span></th>
+                                <td>
+                                    <div class="inline_flex_item">
+                                        <div class="single_cols">
+                                            <select class="form_select">
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <a href="javascript:;" class="btn_util_quad">조회</a>
+                </div>
+            </div>
+            <section class="middle_contents_row">
+                <div class="section_brick_wrap">
+					<div class="section_brick">
+						<div class="section_top_row">
+							<h2 class="section_top_header">계약별 최종심사 상태</h2>
+						</div>
+						<div class="section_contents_row">
+							<div class="list_tb_wrap">
+								<table class="list_tb">
+                                    <colgroup>
+                                        <col style="width: 140px;">
+                                    </colgroup>
+									<thead>
+										<tr>
+											<th class="th_border"><span class="list_thtext"></span></th>
+											<th><span class="list_thtext">전체</span></th>
+											<th><span class="list_thtext">배정대기</span></th>
+											<th><span class="list_thtext">심사대기</span></th>
+											<th><span class="list_thtext">보완요청</span></th>
+											<th><span class="list_thtext">심사완료</span></th>
+											<th><span class="list_thtext">자동신청</span></th>
+											<th><span class="list_thtext">배정완료</span></th>
+											<th><span class="list_thtext">보완완료</span></th>
+											<th><span class="list_thtext">조건확인</span></th>
+											<th><span class="list_thtext">승인</span></th>
+											<th><span class="list_thtext">미심사대상</span></th>
+											<th><span class="list_thtext">보완승인</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <th class="th_border"><span class="list_thtext">건수</span></th>
+                                            <td><span class="list_tdtext">전체</span></td>
+											<td><span class="list_tdtext">배정대기</span></td>
+											<td><span class="list_tdtext">심사대기</span></td>
+											<td><span class="list_tdtext">보완요청</span></td>
+											<td><span class="list_tdtext">심사완료</span></td>
+											<td><span class="list_tdtext">자동신청</span></td>
+											<td><span class="list_tdtext">배정완료</span></td>
+											<td><span class="list_tdtext">보완완료</span></td>
+											<td><span class="list_tdtext">조건확인</span></td>
+											<td><span class="list_tdtext">승인</span></td>
+											<td><span class="list_tdtext">미심사대상</span></td>
+											<td><span class="list_tdtext">보완승인</span></td>
+										</tr>
+                                        <tr>
+                                            <th class="th_border"><span class="list_thtext">보험료 (천원)</span></th>
+                                            <td><span class="list_tdtext">전체</span></td>
+											<td><span class="list_tdtext">배정대기</span></td>
+											<td><span class="list_tdtext">심사대기</span></td>
+											<td><span class="list_tdtext">보완요청</span></td>
+											<td><span class="list_tdtext">심사완료</span></td>
+											<td><span class="list_tdtext">자동신청</span></td>
+											<td><span class="list_tdtext">배정완료</span></td>
+											<td><span class="list_tdtext">보완완료</span></td>
+											<td><span class="list_tdtext">조건확인</span></td>
+											<td><span class="list_tdtext">승인</span></td>
+											<td><span class="list_tdtext">미심사대상</span></td>
+											<td><span class="list_tdtext">보완승인</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="section_brick">
+						<div class="section_top_row">
+							<h2 class="section_top_header">중간심사상태 포함한 전체심사건수</h2>
+						</div>
+						<div class="section_contents_row">
+							<div class="list_tb_wrap">
+								<table class="list_tb">
+                                    <colgroup>
+                                        <col style="width: 140px;">
+                                    </colgroup>
+									<thead>
+										<tr>
+											<th class="th_border"><span class="list_thtext"></span></th>
+											<th><span class="list_thtext">심사건수</span></th>
+											<th><span class="list_thtext">조건확인</span></th>
+											<th><span class="list_thtext">승인</span></th>
+											<th><span class="list_thtext">보완승인</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <th class="th_border"><span class="list_thtext">건수</span></th>
+                                            <td><span class="list_tdtext">심사건수</span></td>
+											<td><span class="list_tdtext">조건확인</span></td>
+											<td><span class="list_tdtext">승인</span></td>
+											<td><span class="list_tdtext">보완승인</span></td>
+										</tr>
+                                        <tr>
+                                            <th class="th_border"><span class="list_thtext">보험료 (천원)</span></th>
+                                            <td><span class="list_tdtext">심사건수</span></td>
+											<td><span class="list_tdtext">조건확인</span></td>
+											<td><span class="list_tdtext">승인</span></td>
+											<td><span class="list_tdtext">보완승인</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="section_brick flex-group">
+                        <div class="flex_item">
+                            <div class="section_top_row">
+                                <h2 class="section_top_header">심사대상 상담코드별 계약건수 현황</h2>
+                            </div>
+                            <div class="section_contents_row">
+                                <div class="list_tb_wrap">
+                                    <table class="list_tb fixed">
+                                        <colgroup>
+                                            <col style="width:50%">
+                                            <col style="width:50%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th><span class="list_thtext">계약건수</span></th>
+                                                <th><span class="list_thtext">상담건수</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="th_border"><span class="list_thtext">1건</span></th>
+                                                <td><span class="list_tdtext"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th_border"><span class="list_thtext">2건</span></th>
+                                                <td><span class="list_tdtext"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th_border"><span class="list_thtext">3건</span></th>
+                                                <td><span class="list_tdtext"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th_border"><span class="list_thtext">4건</span></th>
+                                                <td><span class="list_tdtext"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="th_border"><span class="list_thtext">5건</span></th>
+                                                <td><span class="list_tdtext"></span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
