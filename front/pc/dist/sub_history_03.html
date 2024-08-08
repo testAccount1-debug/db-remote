@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100" />
+	<link rel="stylesheet" href="./assets/css/reset.css" />
+	<link rel="stylesheet" href="./assets/css/jqueryui.css" />
+	<link rel="stylesheet" href="./assets/css/rangeslider.css" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<script src="./assets/js/jquery-3.4.1.min.js"></script>
+	<script src="./assets/js/rangeslider.min.js"></script>
+	<script src="./assets/js/jquery-ui.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/ui.js"></script>
+	<title>원격컨설팅솔루션</title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<header class="header_wrap">
+			<div class="hgroup_inner">
+				<h1 class="toplogo">
+					<a href="#" class="toplogo_link">
+						<img src="./assets/images/toplogo.png" class="toplogo_main" alt="DB손해보험">
+						<img src="./assets/images/toplogo_lotte.png" class="toplogo_sub" alt="원격 컨설팅">
+					</a>
+				</h1>
+			</div>
+			<nav class="hgroup_nav_wrap">
+				<ul class="hgroup_nav_list">
+					<li>
+						<a href="#" class="hgroup_home type2"><i class="ico type2"></i><span class="home_text">홈 화면</span></a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">상담이어하기</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">상담준비</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">원격컨설팅</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item active">
+							<span class="hgroup_nav_text">상담이력</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">계약/심사현황</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">더보기</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main class="middle_wrap pixed">
+			<div class="data_search_container type2">
+				<div class="data_sort_row">
+					<ul class="btn_sort_box_list">
+						<li><a href="javascript:;" class="btn_sort_box"><span class="btn_sort_box_text">정규상담</span></a></li>
+						<li><a href="javascript:;" class="btn_sort_box"><span class="btn_sort_box_text">간편상담</span></a></li>
+						<li><a href="javascript:;" class="btn_sort_box active"><span class="btn_sort_box_text">원포인트 코칭</span></a></li>
+					</ul>
+				</div>
+				<div class="data_search_box">
+					<form>
+						<table class="data_search_field">
+							<colgroup>
+								<col style="width:110px">
+								<col style="width:45%">
+								<col style="width:110px">
+								<col>
+							</colgroup>
+							<tr>
+								<th><span class="data_search_label">코칭일</span></th>
+								<td colspan="3">
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input calendar" style="width:150px" value="2024-06-07">
+										</div>
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input align2" value="00" style="width:34px">
+										</div>
+										<div class="inline_flex_cols">
+											<span class="inline_flex_else">~</span>
+										</div>
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input calendar" style="width:150px" value="2024-06-07">
+										</div>
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input align2" value="24" style="width:34px">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="data_search_label">코칭결과</span></th>
+								<td>
+									<select class="form_select" style="width:160px">
+										<option>전체</option>
+										<option>동반</option>
+										<option>교육</option>
+									</select>
+								</td>
+								<th><span class="data_search_label">동반목적</span></th>
+								<td>
+									<div class="btn_has_row">
+										<div class="btn_has_not_cols">
+											<select class="form_select" style="width:189px">
+												<option>전체</option>
+												<option>1단계 : 가망고객 확보</option>
+												<option>2단계 : 접근 및 방문약속</option>
+												<option>3단계 : 고객문제 발견</option>
+												<option>4단계 : 해결책 제시준비</option>
+												<option>5단계 : 상품권유 및 계약체결</option>
+												<option>6단계 : 증권전달 및 사후관리 신인발굴</option>
+											</select>
+										</div>
+										<div class="btn_has_cols">
+											<button class="btn_control_box">조회</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<div class="list_tb_wrap scroll_type" id="list_table">
+				<table class="list_tb">
+					<thead>
+						<tr>
+							<th><span class="list_thtext"></span></th>
+							<th><span class="list_thtext">청취</span></th>
+							<th><span class="list_thtext">대상조직원번호</span></th>
+							<th><span class="list_thtext">대상조직원명</span></th>
+							<th><span class="list_thtext">전화번호</span></th>
+							<th><span class="list_thtext">이메일주소</span></th>
+							<th><span class="list_thtext">코칭시작일시</span></th>
+							<th><span class="list_thtext">코칭종료일시</span></th>
+							<th><span class="list_thtext">코칭시간</span></th>
+							<th><span class="list_thtext">상담단계</span></th>
+							<th><span class="list_thtext">코칭결과</span></th>
+							<th><span class="list_thtext">고객명</span></th>
+							<th><span class="list_thtext">동반목적</span></th>
+							<th><span class="list_thtext">코칭메모</span></th>
+							<th><span class="list_thtext">통화횟수</span></th>
+							<th><span class="list_thtext">상담코드</span></th>
+							<th><span class="list_thtext">공통컨텐츠</span></th>
+							<th><span class="list_thtext">가입설계</span></th>
+							<th><span class="list_thtext">자료 업로드</span></th>
+							<th><span class="list_thtext">설명정보</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="list_tdtext">1</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item video"><span class="hdtext">전화하기</span></a></td>
+							<td><span class="list_tdtext">28877665</span></td>
+							<td><span class="list_tdtext">김다비</span></td>
+							<td><span class="list_tdtext">010-1234-5678</span></td>
+							<td><span class="list_tdtext">12@naver.com</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">08:50:02</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item pencil"><span class="hdtext">메모</span></a></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">87654321</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item checkdocu"><span class="hdtext">설명정보</span></a></td>
+						</tr>
+						<tr>
+							<td><span class="list_tdtext">2</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item video"><span class="hdtext">전화하기</span></a></td>
+							<td><span class="list_tdtext">28877665</span></td>
+							<td><span class="list_tdtext">김다비</span></td>
+							<td><span class="list_tdtext">010-1234-5678</span></td>
+							<td><span class="list_tdtext">12@naver.com</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">08:50:02</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item pencil"><span class="hdtext">메모</span></a></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">87654321</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item checkdocu"><span class="hdtext">설명정보</span></a></td>
+						</tr>
+						<tr>
+							<td><span class="list_tdtext">3</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item video"><span class="hdtext">전화하기</span></a></td>
+							<td><span class="list_tdtext">28877665</span></td>
+							<td><span class="list_tdtext">김다비</span></td>
+							<td><span class="list_tdtext">010-1234-5678</span></td>
+							<td><span class="list_tdtext">12@naver.com</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">08:50:02</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item pencil"><span class="hdtext">메모</span></a></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">87654321</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item checkdocu"><span class="hdtext">설명정보</span></a></td>
+						</tr>
+						<tr>
+							<td><span class="list_tdtext">4</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item video"><span class="hdtext">전화하기</span></a></td>
+							<td><span class="list_tdtext">28877665</span></td>
+							<td><span class="list_tdtext">김다비</span></td>
+							<td><span class="list_tdtext">010-1234-5678</span></td>
+							<td><span class="list_tdtext">12@naver.com</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">08:50:02</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item pencil"><span class="hdtext">메모</span></a></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">87654321</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item checkdocu"><span class="hdtext">설명정보</span></a></td>
+						</tr>
+						<tr>
+							<td><span class="list_tdtext">5</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item video"><span class="hdtext">전화하기</span></a></td>
+							<td><span class="list_tdtext">28877665</span></td>
+							<td><span class="list_tdtext">김다비</span></td>
+							<td><span class="list_tdtext">010-1234-5678</span></td>
+							<td><span class="list_tdtext">12@naver.com</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">2024-07-08 08:50:02</span></td>
+							<td><span class="list_tdtext">08:50:02</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">상담중</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td><span class="list_tdtext">-</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item pencil"><span class="hdtext">메모</span></a></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">87654321</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td><span class="list_tdtext">1</span></td>
+							<td><span class="list_tdtext">2</span></td>
+							<td class="has_ico"><a href="javascript:;" class="ico_link_item checkdocu"><span class="hdtext">설명정보</span></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</main>
+	</div>
+	<script>
+		$(function() {
+			$(".form_input.calendar").datepicker({
+				monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+				dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+				changeMonth: true,
+				changeYear: true,
+				dateFormat: 'yy-mm-dd',
+				beforeShow(input, inst) {
+
+				}
+			});
+		});
+		document.addEventListener("DOMContentLoaded", function() {
+			// 테이블 드래그
+			tableDrag("#list_table");
+		});
+	</script>
+</body>
+
+</html>
