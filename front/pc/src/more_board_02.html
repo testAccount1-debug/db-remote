@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+	<body class="front_body">
+		<div class="page_wrap">
+			<header class="header_wrap">
+				<div class="hgroup_inner">
+					<h1 class="toplogo">
+						<a href="#" class="toplogo_link">
+							<img src="./assets/images/toplogo.png" class="toplogo_main" alt="DB손해보험">
+							<img src="./assets/images/toplogo_lotte.png" class="toplogo_sub" alt="원격 컨설팅">
+						</a>
+					</h1>
+				</div>
+				<nav class="hgroup_nav_wrap">
+					<ul class="hgroup_nav_list">
+						<li>
+							<a href="#" class="hgroup_home type2"><i class="ico type2"></i><span class="home_text">홈 화면</span></a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">상담이어하기</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">상담준비</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">원격컨설팅</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">상담이력</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item">
+								<span class="hgroup_nav_text">계약/심사현황</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="hgroup_nav_item active">
+								<span class="hgroup_nav_text">더보기</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<main class="middle_wrap pixed gap3">
+				<div class="mid_tab_wrap">
+					<ul class="mid_tab_list">
+						<li><a href="javascript:;" class="mid_tab"><span class="mid_tab_text">공통컨텐츠 관리</span></a></li>
+						<li><a href="javascript:;" class="mid_tab active"><span class="mid_tab_text">접속URL 전송이력</span></a></li>
+						<li><a href="javascript:;" class="mid_tab"><span class="mid_tab_text">로그기록/상품설명 정보</span></a></li>
+					</ul>
+				</div>
+				<div class="list_tb_zone">
+					<!-- <div class="list_top_row align2">
+						<select class="form_select" style="width:115px;"><option>조회기간</option></select>
+					</div> -->
+					<div class="data_search_box">
+						<form>
+							<table class="data_search_field">
+								<tr>
+									<th><span class="data_search_label">발송일</span></th>
+									<td>
+										<div class="inline_flex_item">
+											<div class="inline_flex_cols">
+												<input type="text" class="form_input calendar" style="width:150px" value="2024-06-07">
+											</div>
+											<div class="inline_flex_cols">
+												<span class="inline_flex_else">~</span>
+											</div>
+											<div class="inline_flex_cols">
+												<input type="text" class="form_input calendar" style="width:150px" value="2024-06-07">
+											</div>
+										</div>
+									</td>
+									<th><span class="data_search_label">전송결과</span></th>
+									<td><select class="form_select" style="width:110px"><option>전체</option></select></td>
+								</tr>
+								<tr>
+									<th><span class="data_search_label">조회구분</span></th>
+									<td colspan="3">
+										<div class="btn_has_row">
+											<div class="btn_has_not_cols">
+												<select class="form_select" style="width:150px"><option>수신자명</option></select>
+											</div>
+											<div class="btn_has_cols">
+												<button class="btn_control_box">조회</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+					<div class="list_tb_wrap">
+						<table class="list_tb">
+							<colgroup>
+								<col style="width:70px">
+								<col style="width:10%">
+								<col style="width:10%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th><span class="list_thtext">순서</span></th>
+									<th><span class="list_thtext">발송일</span></th>
+									<th><span class="list_thtext">발송기간</span></th>
+									<th><span class="list_thtext">도착일</span></th>
+									<th><span class="list_thtext">도착시간</span></th>
+									<th><span class="list_thtext">고객명</span></th>
+									<th><span class="list_thtext">전송방법</span></th>
+									<th><span class="list_thtext">주소/번호</span></th>
+									<th><span class="list_thtext">전송결과</span></th>
+									<th><span class="list_thtext">사유</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="list_tdtext">1</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+								</tr>
+								<tr>
+									<td><span class="list_tdtext">2</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+								</tr>
+								<tr>
+									<td><span class="list_tdtext">3</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+									<td><span class="list_tdtext">데이터</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="paging_zone">
+						<div class="paging_else_left_wrap">
+							<p class="paging_fraction">조회결과 : 항목수 / 페이지수</p>
+						</div>
+						<!-- paging -->
+						<div class="paging_wrap">
+							<a href="javascript:;" class="btn_paging_control first disabled"><span class="hdtext">처음</span></a>
+							<a href="javascript:;" class="btn_paging_control prev disabled"><span class="hdtext">이전</span></a>
+							<ul class="btn_paging_num_list">
+								<li><a href="#" class="btn_paging_num active">1</a></li>
+								<li><a href="#" class="btn_paging_num">2</a></li>
+								<li><a href="#" class="btn_paging_num">3</a></li>
+								<li><a href="#" class="btn_paging_num">4</a></li>
+								<li><a href="#" class="btn_paging_num">5</a></li>
+							</ul>
+							<a href="javascript:;" class="btn_paging_control next"><span class="hdtext">다음</span></a>
+							<a href="javascript:;" class="btn_paging_control last"><span class="hdtext">끝</span></a>
+						</div>
+						<!-- // paging -->
+						<div class="paging_else_right_wrap">
+							<ul class="btn_sbox_list">
+								<li><a href="#" class="btn_sbox small"><i class="ico excel"></i><span class="sbox_text">엑셀 다운로드</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(function() {
+						$(".form_input.calendar").datepicker({
+							monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+							dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+							changeMonth: true,
+							changeYear: true,
+							dateFormat: 'yy-mm-dd',
+							beforeShow(input, inst) {
+		
+							}
+						});
+					});
+				</script>
+			</main>
+		</div>
+	</body>
+</html>

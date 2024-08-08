@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+	@@include('./include/head.html')
+	<body class="front_body">
+		<div class="page_wrap user_wrap">
+
+			<div style="margin:50px;">
+				<input type="range" class="range_form">
+			</div>
+		</div>
+
+		<script>
+			$(function(){
+				// range_form
+				$('.range_form').rangeslider({
+
+					// Deactivate the feature detection
+					polyfill: false,
+
+					// Callback function
+					onInit: function() {
+						/// valueOutput(this.$element[0]);
+					},
+
+					// Callback function
+					onSlide: function(position, value) {
+						console.log('onSlide');
+						console.log('position: ' + position, 'value: ' + value);
+					},
+
+					// Callback function
+					onSlideEnd: function(position, value) {
+						console.log('onSlideEnd');
+						console.log('position: ' + position, 'value: ' + value);
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
