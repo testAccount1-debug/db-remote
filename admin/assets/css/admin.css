@@ -245,6 +245,7 @@ Sub page style
     vertical-align: middle;
 }
 .main_body .middle_wrap.pixed {
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto 110px;
 }
