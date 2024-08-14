@@ -196,12 +196,16 @@ icon
 /*---------------------------------------
 Sub page style
 ---------------------------------------*/
+
 .main_body {
     background: #F7FCF6;
 }
 .main_body .page_wrap {
     position: relative;
     z-index: 5;
+}
+.main_body .hgroup_nav_wrap {
+    max-width: 1000px;
 }
 .main_body .header_wrap {
     position: relative;
@@ -235,6 +239,7 @@ Sub page style
     max-width: 130px;
     vertical-align: middle;
 }
+
 .main_body img.toplogo_sub {
     max-width: 70.5px;
     vertical-align: middle;
@@ -243,10 +248,10 @@ Sub page style
     max-width: 1000px;
     margin: 0 auto 110px;
 }
-.admin_body .hgroup_nav_list > li {
+.hgroup_nav_list > li {
     position:relative;
 }
-.admin_body .hgroup_nav_list > li:not(.hgroup_home):hover > a{
+.hgroup_nav_list > li:not(.hgroup_home):hover > a{
     background:#fff;
     border:2px solid #00854A;
     border-bottom: 0;
@@ -254,7 +259,7 @@ Sub page style
     border-bottom-right-radius: 0;
     font-weight: bold;
 }
-.admin_body .sub_nav_list {
+.sub_nav_list {
     display: none;
     position: absolute;
     top: 48px;
@@ -270,7 +275,7 @@ Sub page style
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-.admin_body .sub_nav_list a {
+.sub_nav_list a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -282,19 +287,20 @@ Sub page style
     padding:10px 0;
     font-weight: 500;
 }
-.admin_body .sub_nav_list a:hover {
+.sub_nav_list a:hover {
     background:#F7FCF6;
 } 
-.admin_body .hgroup_nav_list li:hover .sub_nav_list {
+.hgroup_nav_list li:hover .sub_nav_list {
     display: block;
 }
-.admin_body .hgroup_inner {
+.hgroup_inner {
     min-width: 1000px;
     width: 85vw;
 }
-.admin_body .hgroup_nav_wrap {
+.hgroup_nav_wrap {
     min-width: 1000px;
     width: 85vw;
+    margin:32px auto;
 }
 .admin_body .middle_wrap {
     display: block;
@@ -302,9 +308,17 @@ Sub page style
     width: 85vw;
     margin:0 auto 110px;
 }
-
+.hgroup_nav_item.active {
+    background-color: #fff;
+}
+.hgroup_home.hgroup_nav_item.active {
+    background-image: url(../../../front/pc/dist/assets/images/map_home_navi.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 50% 50%;
+}
 .admin_body .list_tb_wrap {
-    overflow-y: scroll;
+    overflow-x: scroll;
     padding-bottom: 14px;
 }
 .list_tb_wrap::-webkit-scrollbar{
