@@ -818,7 +818,12 @@ Popup style
 .tree_wrap .tree-box .sub_tree-box {
     margin-top: 13px;
     padding-left: 16px;
+    display: none;
 }
+.tree_wrap .tree-box .sub_tree-box.active {
+    display: block;
+}
+
 .tree_wrap .tree-box .sub_tree-box li + li {
     /* margin-top: 13px; */
 }
@@ -833,7 +838,7 @@ Popup style
     font-size: 14px;
     font-weight: 500;
 }
-.tree_wrap .tree-box .is-open > a {
+.tree_wrap .tree-box a.active {
     background-image: url(../images/icon_tree-arrow2.svg);
 }
 .tree_wrap .profile-box {

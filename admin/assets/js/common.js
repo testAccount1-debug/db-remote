@@ -14,7 +14,7 @@ $(function() {
 });
 
 /*------------------------------------------------
-    조직도 팝업 호출
+    조직도 팝업 
 ------------------------------------------------*/
 window.onload = () => {
     popClose();
@@ -26,6 +26,7 @@ function popClose(){
     let popClose = document.querySelector('.pop_close');
     if(popClose) {
         popClose.addEventListener("click", (e) => {
+            e.preventDefault()
             let popWrap = popClose.closest('.popup_wrap');
             popWrap.classList.remove('active');
         })
@@ -35,7 +36,8 @@ function popClose(){
 function popOpen(){
     let popOpen = document.querySelector('.tree-btn');
     if(popOpen){
-        popOpen.addEventListener("click", () => {
+        popOpen.addEventListener("click", (e) => {
+            e.preventDefault()
             let popWrap = document.querySelector('.popup_tree');
             if(popWrap) {
                 popWrap.classList.add('active');
@@ -45,14 +47,28 @@ function popOpen(){
 }
 
 function treeToggle(){
-    let treeBtn = document.querySelectorAll('.tree-title');
+    let treeBtns = document.querySelectorAll('.tree-title');
     let subTree = document.querySelector('.sub_tree-box');
-
-    treeBtn.forEach((element, index) => {
-        if(element.nextSibling == subTree){
-        } else {
-        }
+    
+    treeBtns.forEach(treeBtn => {
+        treeBtn.addEventListener("click", () => {
+            if(treeBtn.nextElementSibling === subTree) {
+                if(!treeBtn.nextElementSibling.classList.contains('active')) {
+                    treeBtn.nextElementSibling.classList.add('active');
+                    treeBtn.classList.add('active');
+                } else {
+                    treeBtn.nextElementSibling.classList.remove('active');
+                    treeBtn.classList.remove('active');
+                }
+            } else {
+                if(!treeBtn.nextElementSibling.classList.contains('active')) {
+                    treeBtn.nextElementSibling.classList.add('active');
+                    treeBtn.classList.add('active');
+                } else {
+                    treeBtn.nextElementSibling.classList.remove('active');
+                    treeBtn.classList.remove('active');
+                }
+            }
+        })
     })
-        
 }
-
