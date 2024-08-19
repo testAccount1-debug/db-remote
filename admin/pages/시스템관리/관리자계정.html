@@ -14,6 +14,7 @@
     <script src="../../../front/pc/dist/assets/js/jquery-ui.js"></script>
     <script src="../../../front/pc/dist/assets/js/swiper.min.js"></script>
     <script src="../../../front/pc/dist/assets/js/ui.js"></script>
+    <script src="../../assets/js/common.js"></script>
     <title>원격컨설팅솔루션 관리자</title>
 </head>
 
@@ -93,7 +94,7 @@
                     <form>
                         <table class="data_search_field">
                             <tr>
-								<th><span class="data_search_label">조직<a href="#"><i class="icon icon_tree"></i></a></span></th>
+                                <th><span class="data_search_label">조직<a href="#" class="tree-btn"><i class="icon icon_tree"></i></a></span></th>
 								<td>
 									<div class="inline_flex_item">
 										<div class="inline_flex_cols">
@@ -272,6 +273,125 @@
                 </div>
             </section>
         </main>
+    </div>
+    <div class="popup_wrap popup_tree">
+        <div class="popup_container">
+            <div class="pop_header">
+				<h2>조직도</h2>
+                <a href="#" class="pop_close"><i class="icon icon_close"></i></a>
+            </div>
+            <div class="pop_content">
+                <div class="tree_wrap">
+                    <div class="row">
+                        <div class="search_wrap">
+                            <input type="text" class="search_input" value="" placeholder="부서검색">
+                            <button class="btn_search_sm"><span class="hdtext">검색</span></button>
+                        </div>
+                        <div class="tree-box">
+                            <ul>
+                                <li><a href="#" class="tree-title">DB그룹</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#" class="tree-title">DB손해보험</a>
+                                    <ul class="sub_tree-box">
+                                        <li><a href="#" class="tree-title">디지털사업본부</a></li>
+                                        <li>
+                                            <a href="#" class="tree-title">디지털사업본부</a>
+                                            <ul class="sub_tree-box">
+                                                <li><a href="#" class="tree-title">디지털기획부</a></li>
+                                                <li><a href="#" class="tree-title">디지털운영부</a></li>
+                                                <li><a href="#" class="tree-title">플랫폼개발부</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB금융투자</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="search_wrap">
+                            <input type="text" class="" value="" placeholder="구성원 검색">
+                            <button class="btn_search_sm"><span class="hdtext">검색</span></button>
+                        </div>
+                        <ul class="profile-box">
+                            <li>
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="../../assets/images/ex_img1.jpeg" alt="">
+                                    </div>
+                                    <div class="text-box">
+                                        <p>김미영 대리 [팀원]</p>
+                                        <span>플랫폼개발부 UIUX팀</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="../../assets/images/ex_img2.jpeg" alt="">
+                                    </div>
+                                    <div class="text-box">
+                                        <p>은지혜 사원 [팀원]</p>
+                                        <span>플랫폼개발부 UIUX팀</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="profile-display">
+                            <div class="profile">
+                                <img src="../../assets/images/ex_img2.jpeg" alt="">
+                                <span class="act act-green"></span>
+                                <span class="act act-red"></span>
+                                <span class="act act-blue"></span>
+                                <span class="act act-yellow"></span>
+                            </div>
+                            <div class="pro-info">
+                                <h3>은지혜 사원</h3>
+                                <p>
+                                    <span>플랫폼 개발부 UIUX팀</span>
+                                    <span>DB생명</span>
+                                </p>
+                            </div>
+                            <p class="call-info">
+                                <span><b>M</b>. 010-1212-3456</span>
+                                <span><b>T</b>. 02-1212-3456</span>
+                            </p>
+                            <div class="text-box">
+                                <p>안녕하세요.</p>
+                            </div>
+                            <div class="btn-group">
+                                <a href="" class="btn"><i class="icon icon_msg"></i>쪽지쓰기</a>
+                                <a href="" class="btn"><i class="icon icon_chat"></i>대화하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
