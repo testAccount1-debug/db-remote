@@ -75,13 +75,14 @@
 					<li><a href="javascript:;" class="mid_tab"><span class="mid_tab_text">로그기록/설명정보 정보</span></a></li>
 				</ul>
 			</div>
+			 <!-- tooltip 에 나와야하는 텍스트는 data-title 에 써주시면 됩니다 -->
 			<div class="mid_gallery_wrap">
 				<ul class="mid_gallery_list">
 					<li>
 						<div class="mid_gallery_item">
 							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
 							<div class="item_cols">
-								<div class="thumnail_row"><img src="./assets/images/img_more_thum_01.png" alt=""></div>
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="./assets/images/img_more_thum_01.png" alt=""></div>
 								<div class="control_row">
 									<dl class="control_dl">
 										<dt><span class="control_key">순서</span></dt>
@@ -95,7 +96,7 @@
 						<div class="mid_gallery_item">
 							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
 							<div class="item_cols">
-								<div class="thumnail_row"><img src="./assets/images/img_more_thum_02.png" alt=""></div>
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="./assets/images/img_more_thum_02.png" alt=""></div>
 								<div class="control_row">
 									<dl class="control_dl">
 										<dt><span class="control_key">순서</span></dt>
@@ -109,7 +110,7 @@
 						<div class="mid_gallery_item">
 							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
 							<div class="item_cols">
-								<div class="thumnail_row"><img src="./assets/images/img_more_thum_03.png" alt=""></div>
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="./assets/images/img_more_thum_03.png" alt=""></div>
 								<div class="control_row">
 									<dl class="control_dl">
 										<dt><span class="control_key">순서</span></dt>
@@ -123,7 +124,7 @@
 						<div class="mid_gallery_item">
 							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
 							<div class="item_cols">
-								<div class="thumnail_row"><img src="./assets/images/img_more_thum_04.png" alt=""></div>
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="./assets/images/img_more_thum_04.png" alt=""></div>
 								<div class="control_row">
 									<dl class="control_dl">
 										<dt><span class="control_key">순서</span></dt>
@@ -137,7 +138,7 @@
 						<div class="mid_gallery_item">
 							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
 							<div class="item_cols">
-								<div class="thumnail_row"><img src="./assets/images/img_more_thum_05.png" alt=""></div>
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="./assets/images/img_more_thum_05.png" alt=""></div>
 								<div class="control_row">
 									<dl class="control_dl">
 										<dt><span class="control_key">순서</span></dt>
@@ -151,7 +152,7 @@
 						<div class="mid_gallery_item">
 							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
 							<div class="item_cols">
-								<div class="thumnail_row"><img src="./assets/images/img_more_thum_06.png" alt=""></div>
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="./assets/images/img_more_thum_06.png" alt=""></div>
 								<div class="control_row">
 									<dl class="control_dl">
 										<dt><span class="control_key">순서</span></dt>
@@ -169,6 +170,29 @@
 			</div>
 		</main>
 	</div>
+	<script>
+		function showTooltip(event){
+			if(event.target.dataset.title){
+				const span = document.createElement('span');
+				span.classList.add('tooltip');
+				span.textContent = event.target.dataset.title;
+				event.target.append(span);
+				event.target.classList.add('hover');
+			}
+		}
+	
+		function removeTooltip(event){
+			if(event.target.dataset.title){
+				event.target.lastElementChild.remove();
+				event.target.classList.remove('hover')
+			}
+		}
+	
+		const item = document.querySelector('.mid_gallery_list');
+	
+		item.addEventListener('mouseover',showTooltip);
+		item.addEventListener('mouseout',removeTooltip);
+		</script>
 </body>
 
 </html>

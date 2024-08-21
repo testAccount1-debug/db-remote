@@ -477,21 +477,43 @@ textarea.form_textarea:focus{border-color:#000;}
 
 .mid_gallery_wrap{margin:50px 0 25px;}
 .mid_gallery_list{display:flex; flex-wrap:wrap; gap:45px 100px;margin-right:-100px;}
-.mid_gallery_list > li{flex:0 0 calc(33.333% - 100px);display:flex; justify-content: flex-start;}
+.mid_gallery_list > li{position:relative;flex:0 0 calc(33.333% - 100px);display:flex; justify-content: flex-start;}
 .mid_gallery_list > li:nth-of-type(3n-1){justify-content: center; }
 .mid_gallery_list > li:nth-of-type(3n){justify-content: flex-end;}
 .mid_gallery_item{display:flex; gap:10px;}
 .mid_gallery_item .props_cols{flex:0;}
 .mid_gallery_item .props_cols .props_form{}
 .mid_gallery_item .item_cols{flex:1;}
-.mid_gallery_item .thumnail_row{position:relative;overflow:hidden;border-radius:30px;height:270px;width:240px;}
-.mid_gallery_item .thumnail_row > img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit: cover; object-position: 50% 50%;}
+.mid_gallery_item .thumnail_row{position:relative;height:270px;width:240px;}
+.mid_gallery_item .thumnail_row > img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit: cover; object-position: 50% 50%;z-index: -1;border-radius:30px;}
 .mid_gallery_item .control_row{display:flex; justify-content: center; margin-top:20px;}
 .mid_gallery_item .control_dl{display:flex; align-items: center; gap:10px;}
 .mid_gallery_item .control_dl dt{}
 .mid_gallery_item .control_dl dt .control_key{}
 .mid_gallery_item .control_dl dd{}
 .mid_gallery_item .control_dl dd .form_input{width:80px;text-align: center;}
+.mid_gallery_list .hover:before {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    background:rgba(0,0,0,.4);
+    border-radius: 20px;
+    z-index: 1;
+    content:'';
+}
+.mid_gallery_list .tooltip {
+    position:absolute;
+    padding:10px;
+    background:#fff;
+    border:1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1;
+    width:200px;
+    right:-50%;
+    top:60%;
+}
 
 /* viewer */
 .page_wrap.user_wrap{display:flex;flex-direction: column;min-height:100vh;}

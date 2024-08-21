@@ -25,6 +25,14 @@ function formCommon(){
     
     thisObjParent.removeClass("focus");
   });
+  $(document).on("click",'.d_tr_click tr', function(){
+    let thisObj = $(this);
+    let thisObjParent = thisObj.closest(".d_tr_click");
+
+    thisObjParent.find("tr").not(thisObj).removeClass("active");
+    
+    thisObj.toggleClass("active");
+  });
 }
 
 
@@ -97,13 +105,13 @@ class DesignPopup {
     if ("callback" in this.option) {
       this.option.callback();
     }
-    if (!!this.design_popup_wrap_active) {
+    /* if (!!this.design_popup_wrap_active) {
       this.design_popup_wrap_active.forEach((element, index) => {
         if (this.design_popup_wrap_active !== this.selector) {
           element.classList.remove("active");
         }
       });
-    }
+    } */
     this.layer_wrap_parent.append(this.selector);
     this.dimCheck();
   }
@@ -118,9 +126,9 @@ class DesignPopup {
       this.selector.classList.remove("motion_end");
       setTimeout(() => {
         this.selector.classList.remove("active");
+        this.dimCheck();
       }, 400);
       this.design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
-      this.dimCheck();
       if ("closeCallback" in this.option) {
         this.option.closeCallback();
       }
@@ -128,5 +136,85 @@ class DesignPopup {
         this.domHtml.classList.remove("touchDis");
       }
     }
+  }
+}
+
+
+
+
+function tableDrag(target){
+  const tableContainer = document.querySelector(target);
+  //const tableContainer = document.querySelector('.list_tb_wrap.scroll_type');
+
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
+
+  tableContainer.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    tableContainer.classList.add('active');
+    startX = e.pageX - tableContainer.offsetLeft;
+    scrollLeft = tableContainer.scrollLeft;
+  });
+
+  tableContainer.addEventListener('mouseleave', () => {
+    isDragging = false;
+    tableContainer.classList.remove('active');
+  });
+
+  tableContainer.addEventListener('mouseup', () => {
+    isDragging = false;
+    tableContainer.classList.remove('active');
+  });
+
+  tableContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - tableContainer.offsetLeft;
+    const walk = (x - startX) * 3; // 스크롤 속도를 조정하려면 숫자를 변경
+    tableContainer.scrollLeft = scrollLeft - walk;
+  });
+}
+
+
+function getScrollbarWidth() {
+  // Create a temporary div container and append it into the body
+  const container = document.createElement('div');
+  // Append the div container into the body
+  document.body.appendChild(container);
+
+  // Force scrollbar to appear
+  container.style.overflow = 'scroll';
+  container.style.width = '50px';
+  container.style.height = '50px';
+
+  // Add inner div
+  const inner = document.createElement('div');
+  container.appendChild(inner);
+  inner.style.width = '100%';
+  inner.style.height = '100%';
+
+  // Calculate the width based on the difference between the container width and the inner width
+  const scrollbarWidth = container.offsetWidth - inner.offsetWidth;
+
+  // Remove the temporary div container
+  document.body.removeChild(container);
+
+  return scrollbarWidth;
+}
+
+
+function scrollTableAction(target){
+  const targetTbWrap = document.querySelector(target);
+  const targetThead = targetTbWrap.querySelector(".list_thead_wrap");
+  const targetTbody = targetTbWrap.querySelector(".list_tbody_wrap");
+  const targetTbodyTb = targetTbody.querySelector(".list_tb");
+  /* if(!!targetTbWrap){
+    targetTbWrap
+  } */
+  if(targetTbody.getBoundingClientRect().height>=targetTbodyTb.getBoundingClientRect().height){
+    targetThead.classList.remove("has_scroll");
+  }else{
+    targetThead.classList.add("has_scroll");
   }
 }
