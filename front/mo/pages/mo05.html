@@ -20,14 +20,83 @@
         </header>
         <div class="container bg">
             <div class="video-box top">
-                <!-- 임시 이미지:삭제해주시면 됩니다. -->
+                <button type="button" class="camera-btn" data-state="show">숨기기</button>
                 <img src="../assets/images/dummy1.png" alt="">
+                <span class="info">오성민(33949895)</span>
             </div>
             <div class="video-box bottom">
-                <!-- 임시 이미지:삭제해주시면 됩니다. -->
+                <button type="button" class="camera-btn" data-state="show">숨기기</button>
                 <img src="../assets/images/dummy2.png" alt="">
+                <span class="info">오성민(33949895)</span>
             </div>
         </div>
+        <div class="footer-bottom">
+            <div class="btn-wrap">
+                <a href="#" id="tool-btn" class="icon-btn"><i class="icon icon_plus"></i></a>
+            </div>
+            <ul class="tool-wrap show" id="tool-wrap">
+                <li><i class="icon icon_pen"></i>볼펜</li>
+                <li><i class="icon icon_highlighter"></i>형광펜</li>
+                <li><i class="icon icon_stamp"></i>스템프</li>
+                <li><i class="icon icon_memo"></i>메모</li>
+                <li><i class="icon icon_eraser"></i>지우개</li>
+                <li><i class="icon icon_setting"></i>설정</li>
+            </ul>
+        </div>
     </div>
+    <script>
+        let btns = document.querySelectorAll('.camera-btn');
+
+        btns.forEach((element, index) => {
+            element.addEventListener('click', btnState);
+            function btnState(){
+                if(element.dataset.state == "show") {
+                    element.innerText = "보이기";
+                    element.nextElementSibling.src = "../assets/images/dummy.png";
+                    delete element.dataset.state;
+                }else {
+                    element.innerText = "숨기기";
+                    element.dataset.state = "show";
+                    element.nextElementSibling.src = "../assets/images/dummy2.png"
+                }
+            }
+        });
+
+        const toolBtn = document.getElementById('tool-btn');
+        const toolBox = document.getElementById('tool-wrap');
+
+        let isOpen = false;
+
+        function toggleTool(event) {
+            event.stopPropagation();
+            isOpen ? closeTool() : openTool();
+        }
+
+        function openTool() {
+            isOpen = true;
+            toolBox.classList.add('show')
+        }
+
+        function closeTool() {
+            isOpen = false;
+            toolBox.classList.remove('show')
+        }
+
+        toolBtn.addEventListener('click', toggleTool);
+
+        function handleClickOutside(event) {
+            if (isOpen && !toolBox.contains(event.target)) {
+            closeTool();
+        }
+        }
+        document.addEventListener('click', handleClickOutside);
+
+        document.querySelector("body").addEventListener("click", function(e) {
+            if(e.target.className !== e.currentTarget.querySelector(".footer-bottom").className) {
+                closeTool();
+            }
+        })
+
+    </script>
 </body>
 </html>
