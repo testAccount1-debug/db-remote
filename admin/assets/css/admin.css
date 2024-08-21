@@ -304,7 +304,7 @@ Sub page style
 .hgroup_nav_wrap {
     min-width: 1000px;
     width: 85vw;
-    margin:32px auto;
+    margin:0 auto;
 }
 .admin_body .middle_wrap {
     display: block;
@@ -312,8 +312,37 @@ Sub page style
     width: 85vw;
     margin:0 auto 110px;
 }
+.admin_body .data_search_field th {
+    width: 80px;
+}
+.admin_body .data_search_field td {
+    padding-right: 20px;
+}
+.admin_body .btn_sort_box {
+    position:relative;
+    /* padding-right: 30px; */
+}
+.admin_body .btn_sort_box .sort_close {
+   color:#aaa;
+   margin-left: 6px;
+   font-weight: 400;
+}
+.admin_body .btn_sort_box_text {
+    display: flex;
+    align-items: center;
+}
+.admin_body  .btn_sort_box.active .sort_close {
+    color:#00854A
+}
 .hgroup_nav_item.active {
     background-color: #fff;
+}
+.hgroup_home {
+    background:none;
+}
+.hgroup_home img {
+   width: 55px;
+   object-fit: contain;
 }
 .hgroup_home.hgroup_nav_item.active {
     background-image: url(../../../front/pc/dist/assets/images/map_home_navi.png);
@@ -383,7 +412,7 @@ Sub page style
     padding:0 8px;
 }
 .admin_body select.form_select  {
-    width: 98px;
+    width: 110px;
 }
 .admin_body .single_cols select.form_select {
     width: 160px;
@@ -812,9 +841,6 @@ Popup style
 .tree_wrap .tree-box {
     margin-top: 16px;
 }
-.tree_wrap .tree-box ul {
-    /* margin-bottom: 16px; */
-}
 .tree_wrap .tree-box .sub_tree-box {
     margin-top: 13px;
     padding-left: 16px;
@@ -822,10 +848,6 @@ Popup style
 }
 .tree_wrap .tree-box .sub_tree-box.active {
     display: block;
-}
-
-.tree_wrap .tree-box .sub_tree-box li + li {
-    /* margin-top: 13px; */
 }
 .tree_wrap .tree-box a {
     display: block;
@@ -988,4 +1010,27 @@ Popup style
 }
 .tree_wrap .profile-display .btn-group .btn + .btn {
     margin-left: 10px;
+}
+.log-info {
+    position:absolute;
+    bottom:40px;
+    left: 50px;
+}
+.log-info span {
+    position:relative;
+    font-size: 14px;
+    font-weight: 400;
+}
+.log-info span + span {
+    margin-left: 21px;
+}
+.log-info span + span:before {
+    position:absolute;
+    width: 1px;
+    height: 14px;
+    left: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+    background:#d9d9d9;
+    content: '';
 }
