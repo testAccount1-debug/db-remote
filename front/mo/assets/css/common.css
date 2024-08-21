@@ -700,3 +700,18 @@ input[type="checkbox"]:checked + label::before {
     line-height: 24px;
     font-weight: 400;
 }
+.terms_wrap {
+    padding:15px 0;
+    box-sizing: border-box;
+}
+.terms_wrap strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.terms_wrap p {
+    font-size: 14px;
+    color:#999;
+    margin-bottom: 20px;
+}
