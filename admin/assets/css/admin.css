@@ -207,9 +207,6 @@ Sub page style
     position: relative;
     z-index: 5;
 }
-.main_body .hgroup_nav_wrap {
-    max-width: 1000px;
-}
 .main_body .header_wrap {
     position: relative;
     padding: 36px 0 0 0;
@@ -1043,4 +1040,34 @@ Popup style
     transform: translateY(-50%);
     background:#d9d9d9;
     content: '';
+}
+.data_search_field td:last-of-type {
+    padding-right: 0;
+}
+.data_search_field td.td-sm {
+    max-width: 180px;
+    min-width: 100px;
+}
+.textarea-box {
+     width: 100%;
+    height: 100%;
+    padding:5px;
+    box-sizing: border-box;
+}
+.textarea-box textarea {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding:10px;
+    box-sizing: border-box;
+}
+td.text-box {position:relative;box-sizing: border-box;}
+td.text-box .textarea-box {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }

@@ -20,14 +20,20 @@
         </header>
         <div class="container bg">
             <div class="video-box top">
-                <button type="button" class="camera-btn" data-state="show">숨기기</button>
-                <img src="../assets/images/dummy1.png" alt="">
-                <span class="info">오성민(33949895)</span>
+                <div class="cont">
+                    <button type="button" class="camera-btn">숨기기</button>
+                    <img src="../assets/images/dummy1.png" alt="">
+                    <span class="info">오성민(33949895)</span>
+                </div>
+                <button type="button" class="open-btn hidden"><i class="icon icon_arrow-open"></i></button>
             </div>
             <div class="video-box bottom">
-                <button type="button" class="camera-btn" data-state="show">숨기기</button>
-                <img src="../assets/images/dummy2.png" alt="">
-                <span class="info">오성민(33949895)</span>
+                <div class="cont">
+                    <button type="button" class="camera-btn">숨기기</button>
+                    <img src="../assets/images/dummy2.png" alt="">
+                    <span class="info">오성민(33949895)</span>
+                </div>
+                <button type="button" class="open-btn hidden"><i class="icon icon_arrow-close"></i></button>
             </div>
         </div>
         <div class="footer-bottom">
@@ -46,21 +52,24 @@
     </div>
     <script>
         let btns = document.querySelectorAll('.camera-btn');
+        let openBtn = document.querySelectorAll('.open-btn')
 
         btns.forEach((element, index) => {
-            element.addEventListener('click', btnState);
-            function btnState(){
-                if(element.dataset.state == "show") {
-                    element.innerText = "보이기";
-                    element.nextElementSibling.src = "../assets/images/dummy.png";
-                    delete element.dataset.state;
-                }else {
-                    element.innerText = "숨기기";
-                    element.dataset.state = "show";
-                    element.nextElementSibling.src = "../assets/images/dummy2.png"
-                }
+            element.addEventListener('click', btn);
+            function btn(){
+                element.parentElement.classList.add('hidden');
+                element.parentElement.nextElementSibling.classList.remove('hidden')
             }
         });
+
+        openBtn.forEach((element, index) => {
+            element.addEventListener('click', openBox);
+            function openBox(){
+                element.previousElementSibling.classList.remove('hidden');
+                element.classList.add('hidden');
+
+            }
+        })
 
         const toolBtn = document.getElementById('tool-btn');
         const toolBox = document.getElementById('tool-wrap');

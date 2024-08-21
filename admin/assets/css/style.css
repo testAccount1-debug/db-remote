@@ -203,7 +203,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 /* // paging */
 
 
-.data_search_container{margin:25px 0 20px;}
+.data_search_container{margin:25px 0 60px;}
 .data_search_container.type2{margin:25px 0 45px;}
 .data_sort_row{}
 .btn_sort_box_list{display:flex; flex-wrap:wrap; gap:6px;}
@@ -216,7 +216,7 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .btn_sort_box.active:before{background-position: 0 100%;}
 .btn_sort_box.active .btn_sort_box_text{color:#00854A;}
 
-.data_search_box{border:1px solid #aaa;border-radius:15px;padding:33px 20px; margin-top:15px; box-shadow:0px 4px 4px rgba(0, 0, 0, 0.1);}
+.data_search_box{border:1px solid #aaa;border-radius:15px;padding:20px; margin-top:15px; box-shadow:0px 4px 4px rgba(0, 0, 0, 0.1);}
 .data_search_field{width:100%; table-layout: fixed;}
 .data_search_field tr{}
 .data_search_field tr:last-of-type{}
