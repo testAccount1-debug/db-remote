@@ -10,10 +10,20 @@
     margin:0 auto;
 }
 .header {
+    position:relative;
     display: flex;
     align-items: center;
     padding:0 24px;
-    height: 44px;
+    height: 50px;
+}
+.header:before {
+    position:absolute;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #18A353 0%, #82C140 100%);
+    left: 0;
+    bottom: -6px;
+    content: '';
 }
 .header .logo {
     display: block;
@@ -21,7 +31,7 @@
     height: 27px;
 }
 .header .logo img {
-    width: 95px;
+    width: 97px;
     object-fit: contain;
 }
 .container {
@@ -51,6 +61,8 @@
     color:#fff;
     border-radius: 50px;
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
 }
 .align-center {
     text-align: center;
@@ -59,10 +71,14 @@
     color:#00854A;
 }
 .btn-default {
-    background:#00854A;
+    background:#006A3B;
 }
-.btn-kakao {
+.footer-btn .btn.btn-kakao {
     background:#FFD600;
+    color:#000;
+}
+.btn-disabled {
+    background:#B9B9B9;
 }
 input[type="checkbox"] {
     display: none;
@@ -83,6 +99,9 @@ input[type="checkbox"] {
     box-sizing: border-box;
     vertical-align: middle;
     content: '';
+}
+.chk-wrap + .chk-list {
+    margin-top: 17px;
 }
 input[type="checkbox"]:checked + label::before {
     background-image: url('../images/input-check.svg');
@@ -111,42 +130,55 @@ input[type="checkbox"]:checked + label::before {
     bottom sheet 
 ---------------------------------------*/
 .bottom-sheet-wrapper {
-    position: absolute;
+    position:absolute;
+    bottom:0;
     width: 100%;
-    height: 100%;
+    max-height: 80%;
     z-index: 1;
-    top: 0;
+    overflow: scroll;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -25px 32px 0px rgba(0, 0, 0, 0.07);
 }
 .bottom-sheet-wrapper.active .bottom-sheet {
     transform: translateY(0);
     opacity: 1;
 }
 .bottom-sheet {
-    position: absolute;
-    padding:58px 24px 110px;
+    position:relative;
+    padding:0 24px 110px;
     background:#fff;
     width: 100%;
     min-height: 580px;
     bottom:0;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    box-shadow: 0px -25px 32px 0px rgba(0, 0, 0, 0.07);
     box-sizing: border-box;
     transform: translateY(100%);
     opacity: 0;
     transition:.2s;
     z-index: 10;
 }
-
+.bottom-tit {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1;
+    padding: 20px 0;
+}
+.bottom-sheet .verification {
+    margin: 40px 0;
+}
 .bottom-sheet .sheet-close {
-    position:absolute;
-    right: 34px;
-    top:34px
+   display: inline-block;
+   margin-left: auto;
 }
 .bottom-sheet h2 {
+    display: block;
+    width: 100%;
     font-size:20px;
     font-weight:400;
-    margin-bottom: 16px;
 }
 .bottom-sheet h2 strong {
     font-weight: 700;
@@ -197,7 +229,7 @@ input[type="checkbox"]:checked + label::before {
     background-position: 50% 50%;
     filter:none;
 }
-.bottom-sheet .chk-list .col {
+.bottom-sheet .chk-list .col, .arrow-type .col {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -244,13 +276,19 @@ input[type="checkbox"]:checked + label::before {
     background-size: cover;
     content:'';
 }
+.cont-tit {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+    margin:16px 0 24px;
+}
 .cont-box {
-    margin-top: 64px;
-    min-height: 308px;
+    height: 308px;
     padding:30px 28px;
     border: 1px solid rgba(221, 221, 221, 1);
     box-shadow: 0px 16px 15px 0px rgba(168, 170, 166, 0.5);
     border-radius: 30px;
+    box-sizing: border-box;
 }
 .cont-header {
     margin-bottom: 10px;
@@ -280,6 +318,9 @@ input[type="checkbox"]:checked + label::before {
     align-items: center;
     justify-content: space-between;
     margin:13px 0 7px;
+}
+.verification .header:before {
+    display: none;
 }
 .verification .header h2 {
     font-weight: 500;
@@ -317,8 +358,8 @@ input[type="checkbox"]:checked + label::before {
     text-align: center;
     text-decoration: none;
 }
-.verification .chk-wrap {
-    margin-top: 32px;
+.verification .chk-wrap:not(.type1) {
+    margin-top: 23px;
     padding:16px 30px 16px 16px;
     background:#EFF9E8;
     border-radius: 20px;
@@ -397,6 +438,9 @@ input[type="checkbox"]:checked + label::before {
     /* margin: 15px 0 25px; */
     padding:15px 24px 25px;
     gap: 8px;
+}
+.video-wrap .header:before {
+    display: none;
 }
 .video-wrap .header .box {
     height: 100%;

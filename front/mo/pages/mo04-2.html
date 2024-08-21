@@ -13,15 +13,15 @@
         <div class="bottom-sheet">
             <div class="bottom-tit">
                 <a href="#" class="sheet-close"><i class="icon icon_close"></i></a>
-                <h2><strong>화상통화</strong> 보험모집 동의</h2>
-            </div>          
+                <h2>본인인증</h2>
+            </div>
             <p class="desc">
                 안녕하세요 <span class="point">오*민</span> 고객님!<br>
                 원격컨설팅 전 화상통화 보험모집 동의를 진행하겠습니다.
             </p>
             <div class="chk-wrap">
                 <input id="chk1" type="checkbox">
-                <label for="chk1">[필수]휴대폰인증을 위한 개인(신용)정보 처리 동의</label>
+                <label for="chk1">전체동의</label>
             </div>
             <div class="chk-list">
                 <div class="col">
@@ -53,8 +53,39 @@
                     <a href="#" class="link-btn"><i class="icon icon_arrow-right"></i></a>
                 </div>
             </div>
+            <div class="form-wrap verification">
+                <div class="inp-box">
+                    <span class="tit">성명</span>
+                    <input type="text" class="inp-text" value="홍길동">
+                </div>
+                <div class="inp-box">
+                    <span class="tit">생년월일</span>
+                    <input type="text" class="inp-text" value="850922">
+                </div>
+                <div class="inp-box">
+                    <span class="tit">통신사</span>
+                    <select class="inp-text">
+                        <!-- <option selected disabled hidden>통신사</option> -->
+                        <option value="SKT">SKT</option>
+                        <option value="LG">LG</option>
+                        <option value="KT">KT</option>
+                    </select>
+                </div>
+                <div class="inp-box">
+                    <span class="tit">휴대폰번호</span>
+                    <input type="text" class="inp-text">
+                    <a href="#" class="btn">인증받기</a>
+                </div>
+                <div class="inp-box">
+                    <span class="tit">인증번호 6자리</span>
+                    <input type="text" class="inp-text">
+                    <small class="timer">3:29</small>
+                    <a href="#" class="btn">다시 요청</a>
+                </div>
+            </div>
             <div class="footer-btn">
-                <a href="#" class="btn btn-default">상담시작</a>
+                <a href="#" class="btn btn-disabled">확인</a>
+                <!-- <a href="#" class="btn btn-default">확인</a> -->
             </div>
         </div>
     </div>
