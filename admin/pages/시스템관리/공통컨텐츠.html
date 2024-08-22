@@ -142,27 +142,27 @@
         </p>
     </div>
     <script>
-    function showTooltip(event){
-        if(event.target.dataset.title){
-            const span = document.createElement('span');
-            span.classList.add('tooltip');
-            span.textContent = event.target.dataset.title;
-            event.target.append(span);
-            event.target.classList.add('hover');
+    const items = document.querySelectorAll('.hover_items li');
+
+    items.forEach((item, index) => {
+        item.addEventListener('mouseenter', showTooltip);
+        function showTooltip(){
+            if(item.dataset.title){
+                const span = document.createElement('span');
+                span.classList.add('tooltip');
+                span.textContent = item.dataset.title;
+                item.append(span);
+                item.classList.add('hover');
+            }
+        };
+        item.addEventListener('mouseout', removeTooltip);
+        function removeTooltip(){
+            if(item.classList.contains('hover')){
+                item.classList.remove('hover');
+                item.lastElementChild.remove();
+            }
         }
-    }
-
-    function removeTooltip(event){
-        if(event.target.dataset.title){
-            event.target.lastElementChild.remove();
-            event.target.classList.remove('hover')
-        }
-    }
-
-    const item = document.querySelector('.hover_items');
-
-    item.addEventListener('mouseenter',showTooltip);
-    item.addEventListener('mouseout',removeTooltip);
+    })
     </script>
 </body>
 
