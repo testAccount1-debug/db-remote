@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100" />
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+   <link rel="stylesheet" href="../../assets/css/admin.css" />
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/ui.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <title>통화내역 | 상담관리 | 원격컨설팅솔루션 관리자</title>
+</head>
+<body class="admin_body">
+    <!-- 팝업 호출시 popup_wrap 사용해주시면 됩니다. id 는 테스트값으로 삭제후 사용해주세요. -->
+    <div class="popup_wrap active" id="testPopup">
+        <div class="popup_container">
+            <div class="pop_header">
+				<h2>통화내역</h2>
+                <a href="#" class="pop_close"><i class="icon icon_close"></i></a>
+            </div>
+            <div class="pop_content">
+                <div class="section_brick_wrap">
+					<div class="section_brick">
+						<div class="section_contents_row">
+							<div class="list_tb_wrap">
+								<table class="list_tb">
+									<thead>
+										<tr>
+											<th><span class="list_thtext">고객명</span></th>
+											<th><span class="list_thtext">생년월일</span></th>
+											<th><span class="list_thtext">상담코드</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+                                            <td><span class="list_tdtext">-</span></td>
+											<td><span class="list_tdtext"></span></td>
+											<td><span class="list_tdtext"></span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="section_brick">
+						<div class="section_contents_row">
+                            <div class="list_tb_wrap">
+                                <table class="list_tb">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th><span class="list_thtext">No</span></th>
+                                            <th><span class="list_thtext">통화시작일시</span></th>
+                                            <th><span class="list_thtext">통화종료일시</span></th>
+                                            <th><span class="list_thtext">통화시간</span></th>
+                                            <th><span class="list_thtext">통화</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="list_tdtext">1</span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list_tdtext">1</span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list_tdtext">1</span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list_tdtext">1</span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" onclick="popF()" class="btn_util_quad">통화내역 팝업호출</a>
+
+    <script>
+        //팝업호출기능 테스트입니다. 삭제해주세요.
+        function popF(){
+            let popup = document.querySelector('#testPopup');
+            popup.classList.add('active')
+        }
+        function closeF(){
+            let popup = document.querySelector('#testPopup');
+            popup.classList.remove('active')
+        }
+    </script>
+</body>
+</html>

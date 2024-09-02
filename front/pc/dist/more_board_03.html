@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1100" />
+	<link rel="stylesheet" href="./assets/css/reset.css" />
+	<link rel="stylesheet" href="./assets/css/jqueryui.css" />
+	<link rel="stylesheet" href="./assets/css/rangeslider.css" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<script src="./assets/js/jquery-3.4.1.min.js"></script>
+	<script src="./assets/js/rangeslider.min.js"></script>
+	<script src="./assets/js/jquery-ui.js"></script>
+	<script src="./assets/js/swiper.min.js"></script>
+	<script src="./assets/js/ui.js"></script>
+	<title>원격컨설팅솔루션</title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<header class="header_wrap">
+			<div class="hgroup_inner">
+				<h1 class="toplogo">
+					<a href="#" class="toplogo_link">
+						<img src="./assets/images/main_logo.png" class="toplogo_main" alt="DB손해보험">
+						<img src="./assets/images/toplogo_lotte.png" class="toplogo_sub" alt="원격 컨설팅">
+					</a>
+				</h1>
+			</div>
+			<nav class="hgroup_nav_wrap">
+				<ul class="hgroup_nav_list">
+					<li>
+						<a href="#" class="hgroup_home type2"><i class="ico type2"></i><span class="home_text">홈 화면</span></a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">상담이어하기</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">상담준비</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">원격컨설팅</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">상담이력</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item">
+							<span class="hgroup_nav_text">계약/심사현황</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="hgroup_nav_item active">
+							<span class="hgroup_nav_text">더보기</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main class="middle_wrap pixed gap3">
+			<div class="mid_tab_wrap">
+				<ul class="mid_tab_list">
+					<li><a href="javascript:;" class="mid_tab"><span class="mid_tab_text">공통컨텐츠 관리</span></a></li>
+					<li><a href="javascript:;" class="mid_tab"><span class="mid_tab_text">접속URL 전송이력</span></a></li>
+					<li><a href="javascript:;" class="mid_tab active"><span class="mid_tab_text">로그기록/설명정보 정보</span></a></li>
+				</ul>
+			</div>
+			<div class="list_tb_zone">
+				<div class="data_search_box">
+					<form>
+						<table class="data_search_field">
+							<tr>
+								<th><span class="data_search_label">계약일</span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input calendar" style="width:122px" value="2024-06-07">
+										</div>
+										<div class="inline_flex_cols">
+											<span class="inline_flex_else">~</span>
+										</div>
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input calendar" style="width:122px" value="2024-06-07">
+										</div>
+										<div class="inline_flex_cols">
+											<div class="props_item gap2">
+												<input type="checkbox" class="props_form" id="day_01">
+												<label for="day_01" class="props_label">계약일무관</label>
+											</div>
+										</div>
+									</div>
+								</td>
+								<th><span class="data_search_label">구분</span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols">
+											<select class="form_select" style="width:110px">
+												<option>전체</option>
+											</select>
+										</div>
+										<div class="inline_flex_cols">
+											<input type="text" class="form_input" style="width:158px">
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span class="data_search_label">상담일</span></th>
+								<td colspan="3">
+									<div class="btn_has_row">
+										<div class="btn_has_not_cols">
+											<div class="inline_flex_item">
+												<div class="inline_flex_cols">
+													<input type="text" class="form_input calendar" style="width:122px" value="2024-06-07">
+												</div>
+												<div class="inline_flex_cols">
+													<span class="inline_flex_else">~</span>
+												</div>
+												<div class="inline_flex_cols">
+													<input type="text" class="form_input calendar" style="width:122px" value="2024-06-07">
+												</div>
+												<div class="inline_flex_cols">
+													<div class="props_item gap2">
+														<input type="checkbox" class="props_form" id="day_02">
+														<label for="day_02" class="props_label">상담일무관</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="btn_has_col">
+											<button class="btn_control_box">조회</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				<div class="list_tb_wrap">
+					<table class="list_tb">
+						<colgroup>
+							<col style="width:80px">
+							<col style="width:10%">
+							<col style="width:10%">
+							<col style="width:11%">
+							<col style="width:11%">
+							<col style="width:11%">
+							<col style="width:11%">
+							<col style="width:11%">
+							<col style="width:11%">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th><span class="list_thtext">No.</span></th>
+								<th><span class="list_thtext">지점</span></th>
+								<th><span class="list_thtext">팀</span></th>
+								<th><span class="list_thtext">조직 원번호</span></th>
+								<th><span class="list_thtext">조직원명</span></th>
+								<th><span class="list_thtext">상담코드</span></th>
+								<th><span class="list_thtext">증권번호</span></th>
+								<th><span class="list_thtext">상품명</span></th>
+								<th><span class="list_thtext">계약자명</span></th>
+								<th><span class="list_thtext">생년월일</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="list_tdtext">1</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+							</tr>
+							<tr>
+								<td><span class="list_tdtext">2</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+							</tr>
+							<tr>
+								<td><span class="list_tdtext">3</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+							</tr>
+							<tr>
+								<td><span class="list_tdtext">4</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+							</tr>
+							<tr>
+								<td><span class="list_tdtext">5</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+								<td><span class="list_tdtext">데이터</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="paging_zone">
+					<div class="paging_else_left_wrap">
+						<p class="paging_fraction">조회결과 : 항목수 / 페이지수</p>
+					</div>
+					<!-- paging -->
+					<div class="paging_wrap">
+						<a href="javascript:;" class="btn_paging_control first disabled"><span class="hdtext">처음</span></a>
+						<a href="javascript:;" class="btn_paging_control prev disabled"><span class="hdtext">이전</span></a>
+						<ul class="btn_paging_num_list">
+							<li><a href="#" class="btn_paging_num active">1</a></li>
+							<li><a href="#" class="btn_paging_num">2</a></li>
+							<li><a href="#" class="btn_paging_num">3</a></li>
+							<li><a href="#" class="btn_paging_num">4</a></li>
+							<li><a href="#" class="btn_paging_num">5</a></li>
+						</ul>
+						<a href="javascript:;" class="btn_paging_control next"><span class="hdtext">다음</span></a>
+						<a href="javascript:;" class="btn_paging_control last"><span class="hdtext">끝</span></a>
+					</div>
+					<!-- // paging -->
+					<div class="paging_else_right_wrap">
+						<ul class="btn_sbox_list">
+							<li><a href="#" class="btn_sbox small"><i class="ico excel"></i><span class="sbox_text">엑셀 다운로드</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(function() {
+					$(".form_input.calendar").datepicker({
+						monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+						dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+						changeMonth: true,
+						changeYear: true,
+						dateFormat: 'yy-mm-dd',
+						beforeShow(input, inst) {
+
+						}
+					});
+				});
+			</script>
+		</main>
+	</div>
+</body>
+
+</html>

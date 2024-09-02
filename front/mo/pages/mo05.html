@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <title>원격컨설팅솔루션</title>
+</head>
+<body>
+    <div class="mo-wrap video-wrap">
+        <header class="header">
+            <div class="box">
+                <span>디비사업단</span>
+                <span>디비지점 오성민</span>
+            </div>
+            <div class="box">
+                <a href="#" class="close-btn"><i class="icon icon_close-call"></i></a>
+            </div>
+        </header>
+        <div class="container bg">
+            <div class="video-box top">
+                <div class="cont">
+                    <button type="button" class="camera-btn">숨기기</button>
+                    <img src="../assets/images/dummy1.png" alt="">
+                    <span class="info">오성민(33949895)</span>
+                </div>
+                <button type="button" class="open-btn hidden"><i class="icon icon_arrow-open"></i></button>
+            </div>
+            <div class="video-box bottom">
+                <div class="cont">
+                    <button type="button" class="camera-btn">숨기기</button>
+                    <img src="../assets/images/dummy2.png" alt="">
+                    <span class="info">오성민(33949895)</span>
+                </div>
+                <button type="button" class="open-btn hidden"><i class="icon icon_arrow-close"></i></button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="btn-wrap">
+                <a href="#" id="tool-btn" class="icon-btn"><i class="icon icon_plus"></i></a>
+            </div>
+            <ul class="tool-wrap show" id="tool-wrap">
+                <li><i class="icon icon_pen"></i>볼펜</li>
+                <li><i class="icon icon_highlighter"></i>형광펜</li>
+                <li><i class="icon icon_stamp"></i>스템프</li>
+                <li><i class="icon icon_memo"></i>메모</li>
+                <li><i class="icon icon_eraser"></i>지우개</li>
+                <li><i class="icon icon_setting"></i>설정</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let btns = document.querySelectorAll('.camera-btn');
+        let openBtn = document.querySelectorAll('.open-btn')
+
+        btns.forEach((element, index) => {
+            element.addEventListener('click', btn);
+            function btn(){
+                element.parentElement.classList.add('hidden');
+                element.parentElement.nextElementSibling.classList.remove('hidden')
+            }
+        });
+
+        openBtn.forEach((element, index) => {
+            element.addEventListener('click', openBox);
+            function openBox(){
+                element.previousElementSibling.classList.remove('hidden');
+                element.classList.add('hidden');
+
+            }
+        })
+
+        const toolBtn = document.getElementById('tool-btn');
+        const toolBox = document.getElementById('tool-wrap');
+
+        let isOpen = false;
+
+        function toggleTool(event) {
+            event.stopPropagation();
+            isOpen ? closeTool() : openTool();
+        }
+
+        function openTool() {
+            isOpen = true;
+            toolBox.classList.add('show')
+        }
+
+        function closeTool() {
+            isOpen = false;
+            toolBox.classList.remove('show')
+        }
+
+        toolBtn.addEventListener('click', toggleTool);
+
+        function handleClickOutside(event) {
+            if (isOpen && !toolBox.contains(event.target)) {
+            closeTool();
+        }
+        }
+        document.addEventListener('click', handleClickOutside);
+
+        document.querySelector("body").addEventListener("click", function(e) {
+            if(e.target.className !== e.currentTarget.querySelector(".footer-bottom").className) {
+                closeTool();
+            }
+        })
+
+    </script>
+</body>
+</html>

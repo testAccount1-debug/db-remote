@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100" />
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+   <link rel="stylesheet" href="../../assets/css/admin.css" />
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/ui.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <title>간편상담이력 | 상담관리 | 원격컨설팅솔루션 관리자</title>
+</head>
+
+<body class="admin_body">
+    <div class="page_wrap">
+        <header class="header_wrap">
+            <nav class="hgroup_nav_wrap">
+                <ul class="hgroup_nav_list">
+                    <li class="hgroup_home">
+						<a href="#" class="hgroup_home">
+                            <img src="../../assets/images/nav_logo.png" alt="DB손해보험">
+                        </a>
+					</li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item active">
+                            <span class="hgroup_nav_text">상담관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">정규상담이력</a></li>
+                            <li><a href="#">간편상담이력</a></li>
+                            <li><a href="#">PA코칭이력</a></li>
+                            <li><a href="#">접속URL전송이력</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">계약관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">계약/심사현황</a></li>
+                            <li><a href="#">로그기록/상품설명정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">사용자관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">사용자정보</a></li>
+                            <li><a href="#">등록증업로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">심사관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">심사대상</a></li>
+                            <li><a href="#">심사결과</a></li>
+                            <li><a href="#">심사현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">시스템관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">사용자계정</a></li>
+                            <li><a href="#">관리자계정</a></li>
+                            <li><a href="#">공통컨텐츠</a></li>
+                            <li><a href="#">상담자료 접근이력</a></li>
+                            <li><a href="#">시스템 접근이력</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="middle_wrap">
+            <div class="data_search_container">
+                <div class="data_sort_row">
+					<ul class="btn_sort_box_list">
+						<li>
+                            <a href="javascript:;" class="btn_sort_box active">
+                                <span class="btn_sort_box_text">간편상담이력 <small class="sort_close"></small></span>
+                            </a>
+                        </li>
+						<li>
+                            <a href="javascript:;" class="btn_sort_box">
+                                <span class="btn_sort_box_text">간편상담 <small class="sort_close"></small></span>
+                            </a>
+                        </li>
+						<li>
+                            <a href="javascript:;" class="btn_sort_box">
+                                <span class="btn_sort_box_text">원포인트 코칭 <small class="sort_close"></small></span>
+                            </a>
+                        </li>
+					</ul>
+				</div>
+                <div class="data_search_box">
+					<form>
+						<table class="data_search_field">
+							<tr>
+                                <th><span class="data_search_label">조직<a href="#" class="tree-btn"><i class="icon icon_tree"></i></a></span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols">
+											<div class="search_sm_container">
+												<input type="text" class="input_search_sm" value="23015245">
+												<button class="btn_search_sm"><span class="hdtext">검색</span></button>
+											</div>
+										</div>
+										<div class="inline_flex_cols liquid">
+											<input type="text" class="form_input fix" placeholder="조직명" disabled>
+										</div>
+									</div>
+								</td>
+								<th><span class="data_search_label">조직원번호</span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols">
+											<div class="search_sm_container">
+												<input type="text" class="input_search_sm" value="23015245">
+												<button class="btn_search_sm"><span class="hdtext">검색</span></button>
+											</div>
+										</div>
+										<div class="inline_flex_cols liquid">
+											<input type="text" class="form_input fix" placeholder="조직원명" disabled>
+										</div>
+									</div>
+								</td>
+                                <th><span class="data_search_label">상담결과</span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols single_cols">
+											<select class="form_select">
+												<option value="전체">전체</option>
+												<option value="니즈환기">니즈환기</option>
+												<option value="상담약속">상담약속</option>
+											</select>
+										</div>
+									</div>
+								</td>
+                                <th></th>
+							</tr>
+							<tr>
+                                <th><span class="data_search_label">상담일</span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_item">
+											<input type="text" class="form_input calendar" value="2024-06-07">
+											<select class="form_select min_wid">
+												<option>00</option>
+											</select>
+										</div>
+										<div class="inline_flex_cols">
+											<span class="inline_flex_else">~</span>
+										</div>
+										<div class="inline_flex_item">
+											<input type="text" class="form_input calendar" value="2024-06-07">
+											<select class="form_select min_wid">
+												<option>00</option>
+											</select>
+										</div>
+									</div>
+								</td>
+								<th><span class="data_search_label">구분</span></th>
+								<td>
+									<div class="inline_flex_item">
+										<div class="inline_flex_cols">
+											<select class="form_select">
+												<option value="전체">전체</option>
+												<option value="고객명">고객명</option>
+												<option value="전화번호">전화번호</option>
+												<option value="이메일주소">이메일주소</option>
+												<option value="상담코드">상담코드</option>
+											</select>
+										</div>
+										<div class="inline_flex_cols liquid">
+											<input type="text" class="form_input" placeholder="입력">
+										</div>
+									</div>
+								</td>
+                                <th></th>
+								<td></td>
+                            </form>
+                                <th><a href="javascript:;" class="btn_util_quad">조회</a></th>
+                                
+							</tr>
+						</table>
+					
+                    
+				</div>
+            </div>
+            <section class="middle_contents_row">
+                <div class="section_brick_wrap">
+                    <div class="section_brick">
+                        <div class="section_contents_row">
+                            <div class="list_tb_wrap">
+                                <table class="list_tb">
+                                    <thead>
+                                        <tr>
+                                            <th><span class="list_thtext">No</span></th>
+                                            <th><span class="list_thtext">청취</span></th>
+                                            <th><span class="list_thtext">지점</span></th>
+                                            <th><span class="list_thtext">팀</span></th>
+                                            <th><span class="list_thtext">고객명</span></th>
+                                            <th><span class="list_thtext">생년월일</span></th>
+                                            <th><span class="list_thtext">전화번호</span></th>
+                                            <th><span class="list_thtext">이메일주소</span></th>
+                                            <th><span class="list_thtext">상담시작일시</span></th>
+                                            <th><span class="list_thtext">상담종료일시</span></th>
+                                            <th><span class="list_thtext">상담시간</span></th>
+                                            <th><span class="list_thtext">상담단계</span></th>
+                                            <th><span class="list_thtext">상담결과</span></th>
+                                            <th><span class="list_thtext">상담메모</span></th>
+                                            <th><span class="list_thtext">통화횟수</span></th>
+                                            <th><span class="list_thtext">상담코드</span></th>
+                                            <th><span class="list_thtext">공통컨텐츠</span></th>
+                                            <th><span class="list_thtext">가입설계</span></th>
+                                            <th><span class="list_thtext">설명정보</span></th>
+                                            <th><span class="list_thtext">부문</span></th>
+                                            <th><span class="list_thtext">본부</span></th>
+                                            <th><span class="list_thtext">사업단</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="list_tdtext">1</span></td>
+                                            <td>
+                                                <span class="list_tdtext">
+                                                    <a href="#"><i class="icon icon_voice"></i></a>
+                                                </span>
+                                            </td>
+                                            <td><span class="list_tdtext">지점</span></td>
+                                            <td><span class="list_tdtext">팀</span></td>
+                                            <td><span class="list_tdtext">고객명</span></td>
+                                            <td><span class="list_tdtext">생년월일</span></td>
+                                            <td><span class="list_tdtext">전화번호</span></td>
+                                            <td><span class="list_tdtext">이메일주소</span></td>
+                                            <td><span class="list_tdtext">상담시작일시</span></td>
+                                            <td><span class="list_tdtext">상담종료일시</span></td>
+                                            <td><span class="list_tdtext">상담시간</span></td>
+                                            <td><span class="list_tdtext">상담단계</span></td>
+                                            <td><span class="list_tdtext">상담결과</span></td>
+                                            <td>
+                                                <span class="list_tdtext">
+                                                    <a href="#"><i class="icon icon_memo"></i></a>
+                                                </span>
+                                            </td>
+                                            <td><span class="list_tdtext">통화횟수</span></td>
+                                            <td><span class="list_tdtext">상담코드</span></td>
+                                            <td><span class="list_tdtext">공통컨텐츠</span></td>
+                                            <td><span class="list_tdtext">가입설계</span></td>
+                                            <td>
+                                                <span class="list_tdtext">
+                                                    <a href="#"><i class="icon icon_note"></i></a>
+                                                </span>
+                                            </td>
+                                            <td><span class="list_tdtext">부문</span></td>
+                                            <td><span class="list_tdtext">본부</span></td>
+                                            <td><span class="list_tdtext">사업단</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tb_footer">
+                                <div class="cols">
+                                    <p class="count">조회결과 : 항목수 / 페이지수</p>
+                                    <div class="pagination">
+                                        <a class="page_navi prev disabled" href="#"><i class="icon icon_arrow-prev2"></i></a> <!-- 맨끝으로 -->
+                                        <a class="page_navi prev disabled" href="#"><i class="icon icon_arrow-prev"></i></a> <!-- 이전페이지 -->
+                                        <div class="page-links">
+                                            <a class="page-link" href="#">1</a>
+                                            <a class="page-link" href="#">6</a>
+                                            <a class="page-link" href="#">7</a>
+                                            <a class="page-link active" href="#">8</a>
+                                            <a class="page-link" href="#">9</a>
+                                            <a class="page-link" href="#">10</a>
+                                            <a class="page-link" href="#">11</a>
+                                            <a class="page-link" href="#">12</a>
+                                        </div>
+                                        <a class="page_navi next" href="#"><i class="icon icon_arrow-next"></i></a> <!-- 다음페이지 -->
+                                        <a class="page_navi next" href="#"><i class="icon icon_arrow-next2"></i></a><!-- 맨끝으로 -->
+                                    </div>
+                                    <a href="#" class="download_btn">엑셀 다운로드</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <p class="log-info">
+            <span>오성민(11700222)</span>
+            <span>최종접속정보: 2024.06.24</span>
+            <span>IP : 10.11.11.111</span>
+        </p>
+    </div>
+    <div class="popup_wrap popup_tree">
+        <div class="popup_container">
+            <div class="pop_header">
+				<h2>조직도</h2>
+                <a href="#" class="pop_close"><i class="icon icon_close"></i></a>
+            </div>
+            <div class="pop_content">
+                <div class="tree_wrap">
+                    <div class="row">
+                        <div class="search_wrap">
+                            <input type="text" class="search_input" value="" placeholder="부서검색">
+                            <button class="btn_search_sm"><span class="hdtext">검색</span></button>
+                        </div>
+                        <div class="tree-box">
+                            <ul>
+                                <li>
+                                    <a href="#" class="tree-title">DB그룹</a>
+                                    <ul class="sub_tree-box">
+                                        <li><a href="#" class="tree-title">디지털사업본부</a></li>
+                                        <li>
+                                            <a href="#" class="tree-title">디지털사업본부</a>
+                                            <ul class="sub_tree-box">
+                                                <li><a href="#" class="tree-title">디지털기획부</a></li>
+                                                <li><a href="#" class="tree-title">디지털운영부</a></li>
+                                                <li><a href="#" class="tree-title">플랫폼개발부</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#" class="tree-title">DB손해보험</a>
+                                    <ul class="sub_tree-box">
+                                        <li><a href="#" class="tree-title">디지털사업본부</a></li>
+                                        <li>
+                                            <a href="#" class="tree-title">디지털사업본부</a>
+                                            <ul class="sub_tree-box">
+                                                <li><a href="#" class="tree-title">디지털기획부</a></li>
+                                                <li><a href="#" class="tree-title">디지털운영부</a></li>
+                                                <li><a href="#" class="tree-title">플랫폼개발부</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB금융투자</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#" class="tree-title">DB자산운용</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="search_wrap">
+                            <input type="text" class="" value="" placeholder="구성원 검색">
+                            <button class="btn_search_sm"><span class="hdtext">검색</span></button>
+                        </div>
+                        <ul class="profile-box">
+                            <li>
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="../../assets/images/ex_img1.jpeg" alt="">
+                                    </div>
+                                    <div class="text-box">
+                                        <p>김미영 대리 [팀원]</p>
+                                        <span>플랫폼개발부 UIUX팀</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="../../assets/images/ex_img2.jpeg" alt="">
+                                    </div>
+                                    <div class="text-box">
+                                        <p>은지혜 사원 [팀원]</p>
+                                        <span>플랫폼개발부 UIUX팀</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="profile-display">
+                            <div class="profile">
+                                <img src="../../assets/images/ex_img2.jpeg" alt="">
+                                <span class="act act-green"></span>
+                                <span class="act act-red"></span>
+                                <span class="act act-blue"></span>
+                                <span class="act act-yellow"></span>
+                            </div>
+                            <div class="pro-info">
+                                <h3>은지혜 사원</h3>
+                                <p>
+                                    <span>플랫폼 개발부 UIUX팀</span>
+                                    <span>DB생명</span>
+                                </p>
+                            </div>
+                            <p class="call-info">
+                                <span><b>M</b>. 010-1212-3456</span>
+                                <span><b>T</b>. 02-1212-3456</span>
+                            </p>
+                            <div class="text-box">
+                                <p>안녕하세요.</p>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#" class="btn"><i class="icon icon_msg"></i>쪽지쓰기</a>
+                                <a href="#" class="btn"><i class="icon icon_chat"></i>대화하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

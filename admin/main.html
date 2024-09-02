@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../admin/assets/css/admin.css">
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/chart.js"></script>
+
+    <title>원격컨설팅솔루션</title>
+</head> 
+<body class="main_body">
+    <div class="page_wrap">
+        <header class="header_wrap">
+            <nav class="hgroup_nav_wrap">
+                <ul class="hgroup_nav_list">
+                    <li class="hgroup_home">
+						<a href="#" class="hgroup_home">
+                            <img src="assets/images/nav_logo.png" alt="DB손해보험">
+                        </a>
+					</li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">상담관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">정규상담이력</a></li>
+                            <li><a href="#">간편상담이력</a></li>
+                            <li><a href="#">PA코칭이력</a></li>
+                            <li><a href="#">접속URL전송이력</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">계약관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">계약/심사현황</a></li>
+                            <li><a href="#">로그기록/상품설명정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">사용자관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">사용자정보</a></li>
+                            <li><a href="#">등록증업로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">심사관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">심사대상</a></li>
+                            <li><a href="#">심사결과</a></li>
+                            <li><a href="#">심사현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item active">
+                            <span class="hgroup_nav_text">시스템관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">사용자계정</a></li>
+                            <li><a href="#">관리자계정</a></li>
+                            <li><a href="#">공통컨텐츠</a></li>
+                            <li><a href="#">상담자료 접근이력</a></li>
+                            <li><a href="#">시스템 접근이력</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="middle_wrap pixed">
+            <div class="chart_container">
+                <div class="item item-s">
+                    <h2 class="title">24콜 사용률</h2>
+                    <div class="chart_item" id="doughnut_cont">
+                        <canvas id="doughnut_chart" width="164" height="164"></canvas>
+                        <span class="amount minus">3</span>
+                    </div>
+                </div>
+                <div class="item item-s">
+                    <h2 class="title">PA 모니터링</h2>
+                    <div class="input_item">
+                        <div class="input_wrap">
+                            <p>접속인원<span class="amount minus">1</span></p>
+                            <div class="input_box">
+                                <input type="text" value="10" class="form_input">
+                                <span>명</span>
+                            </div>
+                        </div>
+                        <div class="input_wrap">
+                            <p>통화인원<span class="amount plus">4</span></p>
+                            <div class="input_box">
+                                <input type="text" value="12290" class="form_input">
+                                <span>명</span>
+                            </div>
+                        </div>
+                        <div class="input_wrap">
+                            <p>대기인원<span class="amount plus">1</span></p>
+                            <div class="input_box">
+                                <input type="text" value="382" class="form_input">
+                                <span>명</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title">시간대별 상담완료 / 미완료</h2>
+                    <div class="chart_item">
+                        <canvas id="line-chart" width="425" height="188"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart_container">
+                <div class="item">
+                    <h2 class="title">상담결과 현황</h2>
+                    <div class="chart_item">
+                        <canvas id="bar-chart" width="420" height="196"></canvas>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title">PA별 상담현황</h2>
+                    <div class="chart_item">
+                        <canvas id="horizon-chart" width="420" height="196"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart_container">
+                <div class="item item-m">
+                    <h2 class="title">24 CALL 동시 사용률</h2>
+                    <div class="flex-group">
+                        <div  class="chart_item" id="doughnut_cont2">
+                            <canvas id="doughnut_chart-2" width="164" height="164"></canvas>
+                            <span class="amount plus">3</span>
+                        </div>  
+                    </div>
+                    <canvas id="line-chart2" width="268" height="154"></canvas>
+                    <div class="btn_wrap">
+                        <a href="#" class="download_btn">엑셀 다운로드</a>
+                    </div>
+                </div>
+                <div class="item item-ml">
+                    <h2 class="title">서버 사용률</h2>
+                    <div class="flex-group">
+                        <div class="chart_item" id="doughnut_cont3">
+                            <canvas id="doughnut_chart-3" width="164" height="164"></canvas>
+                        </div>
+                        <div class="chart_item" id="doughnut_cont4">
+                            <canvas id="doughnut_chart-4" width="164" height="164"></canvas>
+                        </div>  
+                    </div>
+                    <div class="chart_item">
+                        <canvas id="line-chart3" width="616" height="154"></canvas>
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#" class="download_btn">엑셀 다운로드</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chart_container">
+                <div class="item">
+                    <h2 class="title">24 CALL 동시 사용률</h2>
+                    <div class="flex-group">
+                        <div class="chart_item" id="doughnut_cont5">
+                            <canvas id="doughnut_chart-5" width="164" height="164"></canvas>
+                        </div>
+                        <div class="chart_item" id="doughnut_cont6">
+                            <canvas id="doughnut_chart-6" width="164" height="164"></canvas>
+                        </div>
+                        <div class="chart_item" id="doughnut_cont7">
+                            <canvas id="doughnut_chart-7" width="164" height="164"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex-group">
+                        <div class="chart-item">
+                            <canvas id="line-chart4" width="426" height="154"></canvas>
+                        </div>
+                        <div class="chart-item">
+                            <canvas id="line-chart5" width="426" height="154"></canvas>
+                        </div>
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#" class="download_btn">엑셀 다운로드</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chart_container">
+                <div class="item">
+                    <h2 class="title">상담완료</h2>
+                    <div class="flex-group">
+                        <div class="chart_item" id="doughnut_cont8">
+                            <canvas id="doughnut_chart-8" width="164" height="164"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart_item">
+                        <canvas id="line-chart6" width="426" height="154"></canvas>
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#" class="download_btn">엑셀 다운로드</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title">상담미완료</h2>
+                    <div class="flex-group">
+                        <div class="chart_item" id="doughnut_cont9">
+                            <canvas id="doughnut_chart-9" width="164" height="164"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart_item">
+                        <canvas id="line-chart7" width="426" height="154"></canvas>
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#" class="download_btn">엑셀 다운로드</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chart_container">
+                <div class="item">
+                    <h2 class="title">상담완료 유형 현황</h2>
+                    <div class="flex-group">
+                        <div class="chart_item" id="doughnut_cont10">
+                            <canvas id="doughnut_chart-10" width="315" height="287"></canvas>
+                        </div>
+                        <div class="chart_item" id="doughnut_cont6">
+                            <h2 class="title">업무별 영상통화 그래프</h2>
+                            <canvas id="bar-chart2" width="426" height="190"></canvas>
+                        </div>
+                    </div>
+                    <div class="btn_wrap">
+                        <a href="#" class="download_btn">엑셀 다운로드</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="../admin/assets/js/admin.js"></script>
+
+</html>

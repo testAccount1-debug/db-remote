@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100" />
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+   <link rel="stylesheet" href="../../assets/css/admin.css" />
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/ui.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <title>세부콘텐츠 | 시스템관리 | 원격컨설팅솔루션 관리자</title>
+</head>
+
+<body class="admin_body">
+    <div class="page_wrap">
+        <header class="header_wrap">
+            <nav class="hgroup_nav_wrap">
+                <ul class="hgroup_nav_list">
+                    <li class="hgroup_home">
+						<a href="#" class="hgroup_home">
+                            <img src="../../assets/images/nav_logo.png" alt="DB손해보험">
+                        </a>
+					</li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">상담관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">정규상담이력</a></li>
+                            <li><a href="#">간편상담이력</a></li>
+                            <li><a href="#">PA코칭이력</a></li>
+                            <li><a href="#">접속URL전송이력</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">계약관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">계약/심사현황</a></li>
+                            <li><a href="#">로그기록/상품설명정보</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">사용자관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">사용자정보</a></li>
+                            <li><a href="#">등록증업로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item">
+                            <span class="hgroup_nav_text">심사관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">심사대상</a></li>
+                            <li><a href="#">심사결과</a></li>
+                            <li><a href="#">심사현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="hgroup_nav_item active">
+                            <span class="hgroup_nav_text">시스템관리</span>
+                        </a>
+                        <ul class="sub_nav_list">
+                            <li><a href="#">사용자계정</a></li>
+                            <li><a href="#">관리자계정</a></li>
+                            <li><a href="#">공통컨텐츠</a></li>
+                            <li><a href="#">상담자료 접근이력</a></li>
+                            <li><a href="#">시스템 접근이력</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="middle_wrap">
+            <div class="data_search_container">
+				<div class="data_sort_row">
+					<ul class="btn_sort_box_list">
+						<li>
+							<a href="javascript:;" class="btn_sort_box active"><span class="btn_sort_box_text">관리</span></a>
+						</li>
+						<li>
+							<a href="javascript:;" class="btn_sort_box"><span class="btn_sort_box_text">신규등록</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+             <!-- tooltip 에 나와야하는 텍스트는 data-title 에 써주시면 됩니다 -->
+			<div class="mid_gallery_wrap">
+				<ul class="mid_gallery_list">
+					<li>
+						<div class="mid_gallery_item">
+							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
+							<div class="item_cols">
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="../../assets/images/img_more_thum_01.png" alt=""></div>
+								<div class="control_row">
+									<dl class="control_dl">
+										<dt><span class="control_key">순서</span></dt>
+										<dd><input type="text" class="form_input"></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="mid_gallery_item">
+							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
+							<div class="item_cols">
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="../../assets/images/img_more_thum_02.png" alt=""></div>
+								<div class="control_row">
+									<dl class="control_dl">
+										<dt><span class="control_key">순서</span></dt>
+										<dd><input type="text" class="form_input"></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="mid_gallery_item">
+							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
+							<div class="item_cols">
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="../../assets/images/img_more_thum_03.png" alt=""></div>
+								<div class="control_row">
+									<dl class="control_dl">
+										<dt><span class="control_key">순서</span></dt>
+										<dd><input type="text" class="form_input"></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="mid_gallery_item">
+							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
+							<div class="item_cols">
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="../../assets/images/img_more_thum_04.png" alt=""></div>
+								<div class="control_row">
+									<dl class="control_dl">
+										<dt><span class="control_key">순서</span></dt>
+										<dd><input type="text" class="form_input"></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="mid_gallery_item">
+							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
+							<div class="item_cols">
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="../../assets/images/img_more_thum_05.png" alt=""></div>
+								<div class="control_row">
+									<dl class="control_dl">
+										<dt><span class="control_key">순서</span></dt>
+										<dd><input type="text" class="form_input"></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="mid_gallery_item">
+							<div class="props_cols"><input type="checkbox" class="props_form type2"></div>
+							<div class="item_cols">
+								<div class="thumnail_row"  data-title="호버시 노출되어야하는 내용을 써주세요."><img src="../../assets/images/img_more_thum_06.png" alt=""></div>
+								<div class="control_row">
+									<dl class="control_dl">
+										<dt><span class="control_key">순서</span></dt>
+										<dd><input type="text" class="form_input"></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="btn_bottom_section">
+				<a href="#" class="btn_box link_reverse skin3 size2"><span class="btn_box_text">취소</span></a>
+				<a href="#" class="btn_box link skin2 size2"><span class="btn_box_text">저장</span></a>
+			</div>
+        </main>
+        <p class="log-info">
+            <span>오성민(11700222)</span>
+            <span>최종접속정보: 2024.06.24</span>
+            <span>IP : 10.11.11.111</span>
+        </p>
+    </div>
+    <script>
+		function showTooltip(event){
+			if(event.target.dataset.title){
+				const span = document.createElement('span');
+				span.classList.add('tooltip');
+				span.textContent = event.target.dataset.title;
+				event.target.append(span);
+				event.target.classList.add('hover');
+			}
+		}
+	
+		function removeTooltip(event){
+			if(event.target.dataset.title){
+				event.target.lastElementChild.remove();
+				event.target.classList.remove('hover')
+			}
+		}
+	
+		const item = document.querySelector('.mid_gallery_list');
+	
+		item.addEventListener('mouseover',showTooltip);
+		item.addEventListener('mouseout',removeTooltip);
+		</script>
+</body>
+
+</html>

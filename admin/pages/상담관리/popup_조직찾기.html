@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100" />
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+   <link rel="stylesheet" href="../../assets/css/admin.css" />
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/ui.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <title>조직찾기 | 상담관리 | 원격컨설팅솔루션 관리자</title>
+</head>
+<body class="admin_body">
+    <!-- 팝업 호출시 popup_wrap 사용해주시면 됩니다. id 는 테스트값으로 삭제후 사용해주세요. -->
+    <div class="popup_wrap active" id="testPopup">
+        <div class="popup_container">
+            <div class="pop_header">
+				<h2>조직찾기</h2>
+                <a href="#" class="pop_close"><i class="icon icon_close"></i></a>
+            </div>
+            <div class="data_search_box bott_area">
+                <form>
+                    <table class="data_search_field">
+                        <tr>
+                            <th><span class="data_search_label">조직구분</span></th>
+                            <td colspan="5" class="td-sm">
+                                <div class="inline_flex_item">
+                                    <div class="inline_flex_cols">
+                                        <select class="form_select Lg_width150">
+                                            <option value="DB손해보험">DB손해보험</option>
+                                            <option value="DB생명">DB생명</option>
+                                            <option value="DB손해사정">DB손해사정</option>
+                                        </select>
+                                    </div>
+                                    <div class="inline_flex_cols">
+                                        <select class="form_select Lg_width300">
+                                            <option value="선택">:: 선택 ::</option>
+                                            <option value="조직01">조직01</option>
+                                            <option value="조직02">조직02</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th><span class="data_search_label">조직번호</span></th>
+                            <td>
+                                <div class="inline_flex_item">
+                                    <div class="inline_flex_cols liquid">
+                                        <input type="text" class="form_input" placeholder="조직번호">
+                                    </div>
+                                </div>
+                            </td>
+                            <th><span class="data_search_label">조직명</span></th>
+                            <td>
+                                <div class="inline_flex_item">
+                                    <div class="inline_flex_cols liquid">
+                                        <input type="text" class="form_input" placeholder="조직명">
+                                    </div>
+                                </div>
+                            </td>
+                            <th><span class="data_search_label">상태</span></th>
+                            <td class="td-sm">
+                                <div class="inline_flex_item">
+                                    <div class="inline_flex_cols single_cols">
+                                        <select class="form_select">
+                                            <option value="전체">전체</option>
+                                            <option value="정상">정상</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </form>
+                            <!--조회버튼-->
+                            <th><a href="javascript:;" class="btn_util_quad">조회</a></th>
+                        </tr>
+                        
+                    </table>
+                
+                
+            </div>
+            <div class="pop_content">
+                <div class="section_brick_wrap">
+					
+					<div class="section_brick">
+						<div class="section_contents_row">
+                            <div class="list_tb_wrap">
+                                <table class="list_tb">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2"><span class="list_thtext">조직</span></th>
+                                            <th colspan="2"><span class="list_thtext">상위조직</span></th>
+                                            <th><span class="list_thtext">개설일자</span></th>
+                                            <th><span class="list_thtext">폐쇄일자</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="list_tdtext">1410</span></td>
+                                            <td><span class="list_tdtext">강남잠실TC지점</span></td>
+                                            <td><span class="list_tdtext">0123</span></td>
+                                            <td><span class="list_tdtext">강남사업단</span></td>
+                                            <td><span class="list_tdtext">2011-02-01</span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="list_tdtext">3128</span></td>
+                                            <td><span class="list_tdtext">서울잠실지점</span></td>
+                                            <td><span class="list_tdtext">0500</span></td>
+                                            <td><span class="list_tdtext">서울사업단</span></td>
+                                            <td><span class="list_tdtext">2009-04-01</span></td>
+                                            <td><span class="list_tdtext"></span></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" onclick="popF()" class="btn_util_quad">조직찾기 버튼</a>
+
+    <script>
+        //팝업호출기능 테스트입니다. 삭제해주세요.
+        function popF(){
+            let popup = document.querySelector('#testPopup');
+            popup.classList.add('active')
+        }
+        function closeF(){
+            let popup = document.querySelector('#testPopup');
+            popup.classList.remove('active')
+        }
+    </script>
+</body>
+</html>

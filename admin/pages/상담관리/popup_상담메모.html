@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1100" />
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/jqueryui.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+   <link rel="stylesheet" href="../../assets/css/admin.css" />
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/ui.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <title>상담메모 | 상담관리 | 원격컨설팅솔루션 관리자</title>
+</head>
+<body class="admin_body">
+    <!-- 팝업 호출시 popup_wrap 사용해주시면 됩니다. id 는 테스트값으로 삭제후 사용해주세요. -->
+    <div class="popup_wrap active" id="testPopup">
+        <div class="popup_container sm">
+            <div class="pop_header">
+				<h2>상담메모</h2>
+                <a href="#" class="pop_close" onclick="closeF()"><i class="icon icon_close"></i></a>
+            </div>
+            <div class="pop_content">
+                <div class="section_brick_wrap">
+					<div class="section_brick">
+						<div class="section_contents_row">
+							<textarea placeholder="메모를 입력하세요."></textarea>
+						</div>
+					</div>
+				</div>
+            </div>
+            <div class="pop_footer">
+                <a href="#" class="btn_box link2 skin1 size2"><span class="btn_box_text">수정</span></a>
+				<a href="#" class="btn_box link skin2 size2"><span class="btn_box_text">저장</span></a>
+            </div>
+        </div>
+    </div>
+
+
+    <a href="#" onclick="popF()" class="btn_util_quad">상담메모 팝업호출</a>
+
+    <script>
+        //팝업호출기능 테스트입니다. 삭제해주세요.
+        function popF(){
+            let popup = document.querySelector('#testPopup');
+            popup.classList.add('active')
+        }
+        function closeF(){
+            let popup = document.querySelector('#testPopup');
+            popup.classList.remove('active')
+        }
+    </script>
+</body>
+</html>
