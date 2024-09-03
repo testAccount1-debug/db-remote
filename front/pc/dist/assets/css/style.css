@@ -913,17 +913,10 @@ input.props_form:checked + .docu_props_label{}
 
 }
 .search_field_label{font-size:14px; font-weight:bold; color:#535353; line-height:1;}
-.search_field_package .search_sm_container{}
-.search_field_package .btn_sbox{}
-
-
-
 
 /* 접속URL전송 */
-.box_link_item_wrap{}
 .box_link_item_list{display:flex; gap:10px;}
 .box_link_item_list > li{flex:1;}
-.box_link_item_list > li:last-of-type{}
 .box_link_item{
     background: #FFFFFF;border: 1px solid #aaa;padding:15px; min-height:150px; box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -935,7 +928,6 @@ input.props_form:checked + .docu_props_label{}
 .box_link_item .ico.kakao{background-image:url("../images/ico_connect_01.png");}
 .box_link_item .ico.sms{background-image:url("../images/ico_connect_02.png");}
 .box_link_item .ico.message{background-image:url("../images/ico_connect_03.png");}
-.box_link_item .spec_row{}
 .box_link_item .keyword_text{font-size:14px; font-weight:bold; color:#000000;}
 .box_link_item .number_text{font-size:12px; color:#000000;margin-top:5px;}
 
@@ -951,34 +943,16 @@ input.props_form:checked + .docu_props_label{}
 .pallet_item.active .pallet_ico:after{display:block;}
 
 
+.section_top_header {font-weight: 700;}
+.inp-value-box {border: 1px solid #aaa;border-radius: 4px;padding:8px 30px}
+.inp-value-box .hidden {display: none;}
+.inp-value-box span {position:relative}
+.inp-value-box span + span {margin-left: 30px;}
+.inp-value-box span + span:before {position: absolute;left: -16px;top:50%;transform: translateY(-50%);width: 1px;height: 14px;background:#D9D9D9;content: '';}
+.section_top_row.align-center {justify-content: flex-start;}
 
-.section_top_header {
-    font-weight: 700;
-}
-.inp-value-box {
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    padding:8px 30px;
-}
-.inp-value-box .hidden {
-    display: none;
-}
-.inp-value-box span {
-    position:relative
-}
-.inp-value-box span + span {
-    margin-left: 30px;
-}
-.inp-value-box span + span:before {
-    position: absolute;
-    left: -16px;
-    top:50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 14px;
-    background:#D9D9D9;
-    content: '';
-}
-.section_top_row.align-center {
-    justify-content: flex-start;
-}
+/* 컨설팅 자료 미리보기 페이지추가 */
+.middle_local_popup_wrap .page_wrap {min-width: auto;}
+.middle_local_popup_wrap .user_main_wrap {margin:0;padding:0;}
+.middle_local_popup_wrap .user_header_inner {padding:0 40px}
+.middle_local_popup_wrap .user_header_inner .left_cols p {font-size: 18px;font-weight: bold;color: #fff;letter-spacing: -1px;}
