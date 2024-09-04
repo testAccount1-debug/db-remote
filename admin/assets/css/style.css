@@ -219,8 +219,6 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .data_search_box{border:1px solid #aaa;border-radius:15px;padding:20px; margin-top:15px; box-shadow:0px 4px 4px rgba(0, 0, 0, 0.1);}
 .data_search_box.bott_area{margin-bottom:30px;}
 .data_search_field{/*width:100%;*/ table-layout: fixed;}
-.data_search_field tr{}
-.data_search_field tr:last-of-type{}
 .data_search_field th{width:110px;}
 .data_search_field th,
 .data_search_field td{padding-bottom:16px; text-align: left;}
@@ -233,15 +231,13 @@ input.input_search{flex:1;border:0;background:none;line-height:1; font-size:16px
 .data_search_row:last-of-type{margin-bottom:0;}
 .data_search_item{flex:1;display:flex;gap:15px;}
 .data_search_label_cols{flex:0 0 110px;}
-.data_search_label{font-size:14px; font-weight:bold; color:#535353; letter-spacing: -1px; display:flex; min-height:34px;align-items: center;}
+.data_search_label{font-size:14px; font-weight:bold; color:#535353; letter-spacing: -1px; display:flex;min-width:100px; min-height:34px;align-items: center;}
 .data_search_form_cols{flex: 1;}
 .inline_flex_item{display:flex;align-items: center;gap:4px;}
-.inline_flex_cols{}
 .inline_flex_cols .props_item{margin-left:5px;}
 .inline_flex_cols.liquid{flex:1;}
 
 .btn_has_row{display:flex; justify-content: space-between; gap:20px;}
-.btn_has_cols{}
 .btn_has_not_cols{min-width:1px;}
 
 select.form_select{color:#1A1A1A;cursor:pointer;font-size:14px; border:1px solid #aaa;height: 34px;padding: 0 30px 0 10px;border-radius:4px;box-sizing:border-box;

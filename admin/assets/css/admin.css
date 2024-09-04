@@ -325,7 +325,7 @@ Sub page style
     width: 110px;
 }
 .admin_body .data_search_field td {
-    padding-right: 50px;
+    /* padding-right: 30px; */
 }
 
 .popup_wrap .data_search_field th {
