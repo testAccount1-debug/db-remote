@@ -328,6 +328,10 @@ Sub page style
     /* padding-right: 30px; */
 }
 
+@media (max-width:1540px){
+	.admin_body .data_search_field td {padding-right: 30px;}
+    .data_search_label {min-width: 80px;}
+}
 .popup_wrap .data_search_field th {
     width: 60px;
 }
