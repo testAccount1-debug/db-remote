@@ -40,7 +40,7 @@
     min-height: calc(100vh - 160px);
     padding-bottom: 160px;
 }
-.pop-wrap.verification {
+.pop-wrap.fixed {
     position:fixed;
     top:0;
     left:0;

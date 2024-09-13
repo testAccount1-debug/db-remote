@@ -9,90 +9,88 @@
 </head>
 <body>
     <div class="mo-wrap">
-        <div class="pop-wrap">
-            <div class="verification">
-                <header class="header">
-                    <h2>본인인증</h2>
-                    <a href="#" class="close"><i class="icon icon_close"></i></a>
-                </header>
-                <div class="pop-container">
-                    <div class="desc">
-                        <p>안녕하세요 <span class="point">오*민</span> 고객님!</p>
-                        <p>먼저 개인정보 보호를 위해 <strong>본인확인</strong>을 진행하겠습니다.</p>
+        <div class="pop-wrap verification">
+            <header class="header">
+                <h2>본인인증</h2>
+                <a href="#" class="close"><i class="icon icon_close"></i></a>
+            </header>
+            <div class="pop-container">
+                <div class="desc">
+                    <p>안녕하세요 <span class="point">오*민</span> 고객님!</p>
+                    <p>먼저 개인정보 보호를 위해 <strong>본인확인</strong>을 진행하겠습니다.</p>
+                </div>
+                <div class="chk-wrap">
+                    <input id="chk1" type="checkbox">
+                    <label for="chk1">전체동의</label>
+                </div>
+                <div class="chk-list arrow-type">
+                    <div class="col">
+                        <div class="chk-wrap type1">
+                            <input id="chk2" type="checkbox">
+                            <label for="chk2">개인(신용)정보 수집·이용 동의</label>
+                        </div>
+                        <a href="#pop1" class="link-btn"><i class="icon icon_arrow-right"></i></a>
                     </div>
-                    <div class="chk-wrap">
-                        <input id="chk1" type="checkbox">
-                        <label for="chk1">전체동의</label>
+                    <div class="col">
+                        <div class="chk-wrap type1">
+                            <input id="chk3" type="checkbox">
+                            <label for="chk3">고육식별정보처리</label>
+                        </div>
+                        <a href="#pop2" class="link-btn"><i class="icon icon_arrow-right"></i></a>
                     </div>
-                    <div class="chk-list arrow-type">
-                        <div class="col">
-                            <div class="chk-wrap type1">
-                                <input id="chk2" type="checkbox">
-                                <label for="chk2">개인(신용)정보 수집·이용 동의</label>
-                            </div>
-                            <a href="#pop1" class="link-btn"><i class="icon icon_arrow-right"></i></a>
+                    <div class="col">
+                        <div class="chk-wrap type1">
+                            <input id="chk4" type="checkbox">
+                            <label for="chk4">서비스 이용약관</label>
                         </div>
-                        <div class="col">
-                            <div class="chk-wrap type1">
-                                <input id="chk3" type="checkbox">
-                                <label for="chk3">고육식별정보처리</label>
-                            </div>
-                            <a href="#pop2" class="link-btn"><i class="icon icon_arrow-right"></i></a>
-                        </div>
-                        <div class="col">
-                            <div class="chk-wrap type1">
-                                <input id="chk4" type="checkbox">
-                                <label for="chk4">서비스 이용약관</label>
-                            </div>
-                            <a href="#pop3" class="link-btn"><i class="icon icon_arrow-right"></i></a>
-                        </div>
-                        <div class="col">
-                            <div class="chk-wrap type1">
-                                <input id="chk5" type="checkbox">
-                                <label for="chk5">휴대폰 본인확인서비스 이용약관 동의</label>
-                            </div>
-                            <a href="#pop4" class="link-btn"><i class="icon icon_arrow-right"></i></a>
-                        </div>
+                        <a href="#pop3" class="link-btn"><i class="icon icon_arrow-right"></i></a>
                     </div>
-                    <div class="form-wrap">
-                        <div class="inp-box">
-                            <span class="tit">성명</span>
-                            <input type="text" class="inp-text" value="홍길동">
+                    <div class="col">
+                        <div class="chk-wrap type1">
+                            <input id="chk5" type="checkbox">
+                            <label for="chk5">휴대폰 본인확인서비스 이용약관 동의</label>
                         </div>
-                        <div class="inp-box">
-                            <span class="tit">생년월일</span>
-                            <input type="text" class="inp-text" value="850922">
-                        </div>
-                        <div class="inp-box">
-                            <span class="tit">통신사</span>
-                            <select class="inp-text">
-                                <!-- <option selected disabled hidden>통신사</option> -->
-                                <option value="SKT">SKT</option>
-                                <option value="LG">LG</option>
-                                <option value="KT">KT</option>
-                            </select>
-                        </div>
-                        <div class="inp-box">
-                            <span class="tit">휴대폰번호</span>
-                            <input type="text" class="inp-text">
-                            <a href="#" class="btn">인증받기</a>
-                        </div>
-                        <div class="inp-box">
-                            <span class="tit">인증번호 6자리</span>
-                            <input type="text" class="inp-text">
-                            <small class="timer">3:29</small>
-                            <a href="#" class="btn">다시 요청</a>
-                        </div>
+                        <a href="#pop4" class="link-btn"><i class="icon icon_arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="footer-btn">
-                    <a href="#" class="btn btn-default">확인</a>
+                <div class="form-wrap">
+                    <div class="inp-box">
+                        <span class="tit">성명</span>
+                        <input type="text" class="inp-text" value="홍길동">
+                    </div>
+                    <div class="inp-box">
+                        <span class="tit">생년월일</span>
+                        <input type="text" class="inp-text" value="850922">
+                    </div>
+                    <div class="inp-box">
+                        <span class="tit">통신사</span>
+                        <select class="inp-text">
+                            <!-- <option selected disabled hidden>통신사</option> -->
+                            <option value="SKT">SKT</option>
+                            <option value="LG">LG</option>
+                            <option value="KT">KT</option>
+                        </select>
+                    </div>
+                    <div class="inp-box">
+                        <span class="tit">휴대폰번호</span>
+                        <input type="text" class="inp-text">
+                        <a href="#" class="btn">인증받기</a>
+                    </div>
+                    <div class="inp-box">
+                        <span class="tit">인증번호 6자리</span>
+                        <input type="text" class="inp-text">
+                        <small class="timer">3:29</small>
+                        <a href="#" class="btn">다시 요청</a>
+                    </div>
                 </div>
+            </div>
+            <div class="footer-btn">
+                <a href="#" class="btn btn-default">확인</a>
             </div>
         </div>
     </div>
 
-    <div class="pop-wrap verification" id="pop1" style="display: none;">
+    <div class="pop-wrap verification fixed" id="pop1" style="display: none;">
         <header class="header">
             <h2>개인(신용)정보 수집이용 동의</h2>
             <a href="#" class="close"><i class="icon icon_close"></i></a>
@@ -117,7 +115,7 @@
         </div>
     </div>
 
-    <div class="pop-wrap verification" id="pop2" style="display: none;">
+    <div class="pop-wrap verification fixed" id="pop2" style="display: none;">
         <header class="header">
             <h2>고육식별정보처리</h2>
             <a href="#" class="close"><i class="icon icon_close"></i></a>
@@ -135,7 +133,7 @@
         </div>
     </div>
 
-    <div class="pop-wrap verification" id="pop3" style="display: none;">
+    <div class="pop-wrap verification fixed" id="pop3" style="display: none;">
         <header class="header">
             <h2>서비스 이용약관</h2>
             <a href="#" class="close"><i class="icon icon_close"></i></a>
@@ -153,7 +151,7 @@
         </div>
     </div>
 
-    <div class="pop-wrap verification" id="pop4" style="display: none;">
+    <div class="pop-wrap verification fixed" id="pop4" style="display: none;">
         <header class="header">
             <h2>통신사 이용약관</h2>
             <a href="#" class="close"><i class="icon icon_close"></i></a>
