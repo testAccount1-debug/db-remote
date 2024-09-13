@@ -956,3 +956,4 @@ input.props_form:checked + .docu_props_label{}
 .middle_local_popup_wrap .user_main_wrap {margin:0;padding:0;}
 .middle_local_popup_wrap .user_header_inner {padding:0 40px}
 .middle_local_popup_wrap .user_header_inner .left_cols p {font-size: 18px;font-weight: bold;color: #fff;letter-spacing: -1px;}
+td.border-bottom {border-bottom: 1px solid #bbb;;}

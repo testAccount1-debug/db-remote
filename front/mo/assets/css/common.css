@@ -40,6 +40,14 @@
     min-height: calc(100vh - 160px);
     padding-bottom: 160px;
 }
+.pop-wrap.verification {
+    position:fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    background:#fff;
+    z-index: 100;
+}
 .pop-container {
     padding:0 24px;
     padding-bottom: 140px;
@@ -708,10 +716,36 @@ input[type="checkbox"]:checked + label::before {
     display: block;
     font-size: 16px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom:20px;
 }
 .terms_wrap p {
     font-size: 14px;
     color:#999;
     margin-bottom: 20px;
+}
+.terms_wrap p.sub-tit {
+    margin-top: 10px;
+    font-size: 16px;
+    color:#000;
+}
+.terms_wrap ul {
+    margin:12px 0 20px;
+}
+.terms_wrap ul li {
+    position:relative;
+    padding-left:12px;
+    font-size: 14px;
+}
+.terms_wrap ul li:before {
+    position:absolute;
+    width: 4px;
+    height: 4px;
+    left: 0;
+    top:4px;
+    background:#000;
+    border-radius: 50%;
+    content: '';
+}
+.terms_wrap li + li {
+    margin-top: 8px;
 }
