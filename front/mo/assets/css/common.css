@@ -41,7 +41,7 @@
     padding-bottom: 160px;
 }
 .pop-wrap.fixed {
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     height: 100vh;
@@ -49,9 +49,7 @@
     background:#fff;
     z-index: 100;
 }
-.pop-wrap.fixed .pop-container {
-    overflow: auto;
-}
+
 .pop-container {
     padding:0 24px;
     padding-bottom: 140px;
