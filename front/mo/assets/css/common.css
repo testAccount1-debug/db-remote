@@ -817,9 +817,10 @@ input[type="checkbox"]:checked + label::before {
     border:none;
     padding:8px 14px;
     background:none;
+    color:#000;
 }
 .tab_line button.active {
-    border-bottom: 2px solid;
+    border-bottom: 2px solid #000;
 }
 .tab_cont_wrap .tab_cont {
     display: none;
