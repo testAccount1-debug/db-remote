@@ -848,7 +848,7 @@ input[type="checkbox"]:checked + label::before {
 }
 .tab_cont p:last-child {
     margin-top: 30px;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     color:#777;
 }
 .tab_cont p + ul {
@@ -856,9 +856,6 @@ input[type="checkbox"]:checked + label::before {
 }
 .tab_cont ul {
     position:relative;
-}
-.tab_cont ul:last-child {
-    margin-bottom: 200px;
 }
 .tab_cont ul li {
     font-size: 14px;
