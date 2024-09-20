@@ -56,6 +56,9 @@
     box-sizing: border-box;
     height: calc(100% - 54px);
 }
+.pop-container.scroll {
+    overflow-y: scroll;
+}
 .footer-btn {
     position:absolute;
     bottom:47px;
